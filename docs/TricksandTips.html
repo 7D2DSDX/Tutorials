@@ -1,0 +1,206 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Tricks and Tips</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("TricksandTips");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Tricks and Tips</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="SDXBeginnerTutorial.html">SDX Beginner Tutorial</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SDXBeginnerTutorial.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="BuildingtheCubeMod.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="QuickStart.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem196.png"></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Now that you've completed the Beginner Tutorial successfully, it's time to let you in on some tricks and tips.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a class="rvts18" href="Buildingforthefirsttime.html">Building for the first time</a><span class="rvts6"> step walked you through how to trigger your first SDX build. At first, we didn't enable the Katana mod, so </span><span class="rvts12">nothing</span><span class="rvts6"> happened, right?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Actually, the SDX Launcher </span><span class="rvts12">did</span><span class="rvts6"> do something to the Assembly-CSharp.dll even without using any SDX mods, and that was instrumenting it with some handy SDX hooks. The initial hooks that SDX does every time it builds, regardless of mods enabled, is to allow loading the unity3d bundles for adding textures.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps8"><span class="rvts0"><span class="rvts47">Adding new Resources</span></span></h2>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">With these hooks, it's now possible to just copy the KatanaSample's Resource file, michonnekatana.unity3d, into the "</span><span class="rvts12">Working\Mods\SDX\Resources\"</span><span class="rvts6"> folder, and reference it in your XML files, adding a new item as you would with traditional XML edits. The property Meshfile is changed to point to #michonnekatana?katana. &nbsp;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">File: Data\Config\items.xml</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">&lt;item id="1466" name="katanamichonne"&gt;</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">&lt;!-- Extend it from the machete, but add the custom mesh --&gt;</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">&lt;property name="Extends" value="machete" /&gt;</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">&lt;property name="Meshfile" value="#michonnekatana?katana" /&gt;</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">&lt;/item&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">When the game starts, the SDX hooks activate, and as the game is parsing the XML files, it'll see the special Meshfile reference, and look under the Resources folder for a matching mesh.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">#michonnekatana is translated to michonnekatana.unity3d</span></p>
+<p class="rvps5"><span class="rvts6">?katana is translated to look for the katana game object inside of michonnekatana.unity3d.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">You can continue to do that, dropping the unity3d bundles into the Resources folder, and making references to the Meshfile, without using the SDX Launcher again.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps8"><span class="rvts0"><span class="rvts47">Using Non-Vanilla Files as a Base</span></span></h2>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For our examples, we have been using the vanilla XML files as a base. This makes a good, consistent starting point to get you comfortable with SDX without getting too overwhelmed.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">But that's not the only way you can enjoy SDX mods, nor does it mean you have to piece together a mod yourself. If you have an existing XML mod that you want to use, such as Clockwork Project, or Valmar Overhaul, you can use those mods as a base file. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">All you need to do is install the mod, as per the modders instructions, into your Working folder. Verifying the Mod works as-is, and run it through the SDX Launcher. From there, you can copy and paste unity3d files into the Resources folder, and update the XML files to use the new Meshfile.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps8"><span class="rvts0"><span class="rvts47">The Mods/KatanaSample/Config/ Folder</span></span></h2>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In our examples, we included a Config/Katana.xml</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts24">&lt;configs&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;!-- &nbsp;This tells SDX to add to the Items.xml --&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;config name="items"&gt;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;!-- This tells SDX to add the following Items to the bottom of the Items list --&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;append xpath="/items"&gt;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;!-- New item will be Katana --&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;item id="" name="katanamichonne"&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;!-- Extend it from the machete, but add the custom mesh --&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;property name="Extends" value="machete"/&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;property name="Meshfile" value="#michonnekatana?katana" /&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;/item&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;/append&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts24">&lt;/configs&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts6">It's actually optional in SDX to need a Config/ folder. Once you add in your SDX hooks, you can edit the XML files as you normally would. Be sure to edit your mod.xml file and comment out the Config line:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;config_mods&gt;</span></p>
+<p class="rvps2"><span class="rvts24"></span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">&lt;!--import file="Config\Katana.xml" /--&gt;</span></p>
+<p class="rvps2"><span class="rvts24"> &nbsp; &nbsp;&lt;/config_mods&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">So why we do we start with a Config folder if we don't need it? </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The reason to use a Config folder for a SDX mod is </span><span class="rvts12">ease of maintenance and distribution.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you code all your XML into the Config folder, using the recommended format, then your XML snippets will be merged into the vanilla files, or into whatever modded files someone is using. When a new Alpha release comes out, you'll just need to re-run the SDX Launcher, and merge your changes. With some minor tweaks, which are necessary for each of the Alpha releases, your mod will be ready.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you are creating a complete SDX overhaul, then you could probably skip the Config folder in your SDX Mod. However, if you are building individual mods to be used by others, then it's best to use the Config folder for your mod.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
