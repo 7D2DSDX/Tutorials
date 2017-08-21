@@ -1,0 +1,136 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Changes to SDX</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ChangestoSDX");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Changes to SDX</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="GettingStarted.html">Getting Started</a> &rsaquo;&rsaquo; <a href="GettingtheTools.html">Getting the Tools</a> &rsaquo;&rsaquo; <a href="SDX070.html">SDX 0.7.0</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SDX070.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="UndertandinganSDXmod.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="TechnicalChanges.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">Note: If you downloaded using the recommended </span><span class="rvts20">SDXModding Download</span><span class="rvts6"> link, you should be aware that this is a modified SDX version by sphereii.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The following Quality of Life Changes were made. These changes were done to make the experience more comfortable for new modders, and help players install files easier.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">- Skipping Localization.txt due to encoding issues</span></p>
+<p class="rvps2"><span class="rvts6">- Skipping XUI files, due to encoding issues</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">- The XUI files contain variables, such as ${name}, and the XML process is filtering them out.</span></p>
+<p class="rvps2"><span class="rvts6">- Removed the requirement to having a Settings.ini file</span></p>
+<p class="rvps2"><span class="rvts6">- Changed the Mods folder structure for clients to more closely match traditional XML Mods folders</span></p>
+<p class="rvps2"><span class="rvts6">- Contains the empty Mods.dll, and have it automatically deploy as part of the SDX Compile process</span></p>
+<p class="rvps2"><span class="rvts6">- Copies the Config.xml into the correct location</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"></span><br/><span class="rvts6">Example of the revised Folder Structure:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Any Resources you use, such as messes, should be located under Mods\&lt;ModName&gt;\Resources.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Example:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">7daystodie.exe</span></p>
+<p class="rvps2"><span class="rvts6">Config.xml</span></p>
+<p class="rvps2"><span class="rvts6">Mods\HalDllUpdates</span></p>
+<p class="rvps2"><span class="rvts6">Mods\True Survival SDX\Resources</span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com">Free PDF documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

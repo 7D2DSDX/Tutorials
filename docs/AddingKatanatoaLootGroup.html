@@ -1,0 +1,223 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Adding Katana to a Loot Group</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("AddingKatanatoaLootGroup");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Adding Katana to a Loot Group</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="SDXBeginnerTutorial.html">SDX Beginner Tutorial</a> &rsaquo;&rsaquo; <a href="TheKatanaMod.html">The Katana Mod</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="TheKatanaMod.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="AddingaRecipefortheKatanaMod.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="TheCubeMod.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">With Steel being an expensive resource for a katana, we want to give players the chance of finding one. Let's add the Katana to a loot group.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In the SDX Launcher, click on the Mods Folder.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem116.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Then navigate into the double click on the Katana Sample folder, then the Config folder:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem118.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Using Notepad++, edit the file</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Add a new "&lt;config&gt; node under the katanamichonne recipe by copy and pasting the Loot Snippet, highlighted in Blue for clarity</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">Loot Snippet</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;!-- Let's add the Katana to the melee loot group --&gt;</span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;config name="loot"&gt;</span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;append xpath="/lootcontainers/lootgroup[@name='weaponsMelee']"&gt;</span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;item name="katanamichonne" prob="0.05" /&gt;</span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;/append&gt;</span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;/config&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">So this one is more complex the other ones. Notice the "&lt;append xpath"?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">That's an xpath script that tells the SDX Launcher to look in the &lt;lootcontainers&gt; tag, find the &lt;lootgroup&gt; that has the attribute name='weaponsMelee', and appends it to the node list.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Katana.xml should look like this now:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">File: KatanaSample\Config\Katana.xml</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts22">&lt;configs&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- &nbsp;This tells SDX to add to the Items.xml --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;config name="items"&gt;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- This tells SDX to add the following Items to the bottom of the Items list --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;append xpath="/items"&gt;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- New item will be Katana --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;item id="" name="katanamichonne"&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- Extend it from the machete, but add the custom mesh --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Extends" value="machete"/&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Meshfile" value="#michonnekatana?katana" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/item&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/append&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- Adding a new recipe for the mod --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;config name="recipes"&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;append xpath="/recipes" &gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;recipe name="katanamichonne" count="1" craft_area="workbench"&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;ingredient name="forgedSteel" count="20"/&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;ingredient name="wood" count="4"/&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;ingredient name="leather" count="4"/&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/recipe&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/append&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;!-- Let's add the Katana to the melee loot group --&gt;</span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;config name="loot"&gt;</span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;append xpath="/lootcontainers/lootgroup[@name='weaponsMelee']"&gt;</span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;item name="katanamichonne" prob="0.05" /&gt;</span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;/append&gt;</span></p>
+<p class="rvps2"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts22">&lt;/configs&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Once you've saved your changes, go back to the SDX Launcher, and click on the Build Button.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you look through the log file, you'll see where it's adding the new XML:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem119.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Remember, the "</span><span class="rvts45">ERROR: No assembly from BuildAndPatchModsTask</span><span class="rvts6">" </span><span class="rvts46">is not a fatal error right now, since we are not compiling any scripts for the Katana</span></p>
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<p class="rvps2"><span class="rvts46">Once compiled, look in the loot.xml of the Working game:</span></p>
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem120.png"></p>
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<p class="rvps2"><span class="rvts46">And search for "katana"</span></p>
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">File: Data\Config\loot.xml</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem121.png"></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<p class="rvps5"><span class="rvts46"><br/></span></p>
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/create-epub-ebooks">Free EPub producer</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

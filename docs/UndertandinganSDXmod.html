@@ -1,0 +1,275 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Undertanding an SDX mod</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("UndertandinganSDXmod");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Undertanding an SDX mod</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="GettingStarted.html">Getting Started</a> &rsaquo;&rsaquo; <a href="GettingtheTools.html">Getting the Tools</a> &rsaquo;&rsaquo; <a href="SDX07x.html">SDX 0.7.x</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SDX07x.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="InstallingandConfiguringSDXLaunc.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="SDXLauncher.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">Start the SDX Launcher</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem88.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Click on the "Mods Folder". This will open up the Explorer Window where the mods are installed.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem90.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Double click on the "Sample" Folder, and look at the contents of the folder</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem91.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Config folder contains an XML file, that includes all the XML snippets and new items, blocks, and other items you want merged into SDX.</span></p>
+<p class="rvps2"><span class="rvts6">The Resources folder contains the Unity3D bundles, which are your textures for new items and blocks.</span></p>
+<p class="rvps2"><span class="rvts6">mod.xml is a basic XML configuration file for SDX.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts23">mod.xml:</span></span></h2>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The mod.xml gives information for the SDX Launcher, to show p in the tool.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts22">&lt;mod&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;info&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;author&gt;sphereii&lt;/author&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;name&gt;Sample&lt;/name&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;description&gt;Sample Basic SDX Mod&lt;/description&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;mod_version&gt;1.0&lt;/mod_version&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;game_version&gt;16.2&lt;/game_version&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;launcher_version&gt;0.0.0&lt;/launcher_version&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/info&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- This references any config files that SDX needs to merge into your files --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;config_mods&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;import file="Config\Sample.xml" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"> &nbsp; &nbsp;&lt;/config_mods&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts22">&lt;/mod&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The &lt;config_mods&gt; points to where your mods' XML files are stored.</span></p>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts23"><br/></span></span></h2>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts23"><br/></span></span></h2>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts23">"Config" Folder: &nbsp;</span></span></h2>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Double click on the "Config" folder, and open up the Sample.xml in Notepad++. This XML adds a carrot and a carrot bundle using a unity3d bundle for its mesh.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="802" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts22">&lt;configs&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- &nbsp;This tells SDX to add to the Items.xml --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;config name="items"&gt;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- This tells SDX to add the following Items to the bottom of the Items list --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;append xpath="/items"&gt;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- Example of a carrot, using a custom mesh. Notice no ID value? SDX will populate it --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;item id="" name="carrot"&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- SDX Textures are referenced like below: --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Meshfile" value="#fruits?carrot" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="HoldType" value="45" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Material" value="organic" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Stacknumber" value="500" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property class="Action1"&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- UseAction --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Class" value="Eat" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Delay" value="1.0" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Use_time" value="..." /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Gain_health" value="2" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Gain_food" value="2" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Gain_water" value="2" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Gain_wellness" value="0.2" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Sound_start" value="UseActions/player_eating" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/property&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Group" value="Food/Cooking" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="EconomicValue" value="5" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/item&gt;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- Adding a carrotBundle --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;item id="" name="carrotBundle" &gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Extends" value="carrot" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property class="Action1"&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Gain_health" value="6" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Gain_food" value="6" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Gain_water" value="6" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;property name="Gain_wellness" value="0.6" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/property&gt;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/item&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/append&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- switches SDX to now add the following to the recipes.xml --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;config name="recipes"&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;append xpath="/recipes"&gt;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;!-- Add in the recipe for the a carrot bundle --&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;recipe name="carrotBundle" count="1"&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;ingredient name="carrot" count="3" /&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/recipe&gt;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/append&gt;</span></p>
+<p class="rvps2"><span class="rvts22"></span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts22">&lt;/configs&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">SDX will read this XML file, and add its contents to the right XML of the game. At the bottom of the file, it shows where it's adding the recipe on how to make a carrotBundle using your new items.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="425" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Sample Items Code</span></p>
+</td>
+<td width="1181" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Description</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="425" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;config name="items"&gt;</span></p>
+</td>
+<td width="1181" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells SDX that everything in between the &lt;config&gt; tags will be included in the Items.xml file</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="425" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;append xpath="/items"&gt;</span></p>
+</td>
+<td width="1181" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells SDX that everything in between the &lt;Append&gt; path will be included inside of the &lt;items&gt; tag of items.xml</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="425" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;item id="" name="carrot"&gt;</span></p>
+</td>
+<td width="1181" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells SDX the name of the new item to add. Notice there is no ID? This will be auto-generated to the lowest new number available.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="425" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;property name="Meshfile" value="#fruits?carrot" /&gt;</span></p>
+</td>
+<td width="1181" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This will tell SDX, at run time, what the meshfile is called.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="425" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;/append&gt;</span></p>
+</td>
+<td width="1181" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Closes the append tag</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="425" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;/config&gt;</span></p>
+</td>
+<td width="1181" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Closes the Items tag</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps8"><span class="rvts0"><span class="rvts24">Resources:</span></span></h1>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Resources folder contains all your Unity 3D models and textures, stored as Unity Bundle 3D files.</span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

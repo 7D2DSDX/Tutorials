@@ -1,0 +1,183 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Troubleshooting</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Troubleshooting");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Troubleshooting</h1>
+				
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="InstallingUABE.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="SDXBeginnerTutorial.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">The SDX Launcher is very fickle, and can easily generate error messages. The following guide will show you the error, and how to fix it. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps7"><span class="rvts0"><span class="rvts22">After every fix, click on the Actions button, and click on Restore Backup.</span></span></h2>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h4 class="rvps15"><span class="rvts0"><span class="rvts43">Build Errors</span></span></h4>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps8"><span class="rvts0"><span class="rvts23">"</span></span><span class="rvts0"><span class="rvts44">Unhandled Exception: System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\...</span></span><a name="" Unhandled="" Exception:="" System.IO.DirectoryNotFoundException:="" Could="" not="" find="" a="" part="" of="" the="" path="" C:=""></a>
+<span class="rvts0"><span class="rvts23">"</span></span></h1>
+<p class="rvps16"><img alt="" style="padding : 1px;" src="lib/NewItem66.png"></p>
+<p class="rvps16"><span class="rvts6"><br/></span></p>
+<p class="rvps16"><span class="rvts6">The above error is telling you that the Directory selected in the "</span><a class="rvts20" href="SettingsButton.html">Settings Button</a><span class="rvts6">" section isn't set correctly. &nbsp;</span></p>
+<p class="rvps16"><span class="rvts6"><br/></span></p>
+<p class="rvps16"><span class="rvts6">Notice that the error is pointing to the "7 Days To Die Dedicated Server", but the drop down is showing "7 Days To Die [1.0]. This caused the SDX Launcher to be confused, as you've selected a Client compile ( "7 Days To Die [1.0]" ), but the "Settings Button" hasn't set the Game Directory to a Client install. Rather, we mistakenly set it to the "7 Days To Die Dedicated Server".</span></p>
+<p class="rvps16"><span class="rvts6"><br/></span></p>
+<p class="rvps16"><span class="rvts6">To Fix: &nbsp;Follow the instructions in the "</span><a class="rvts20" href="SettingsButton.html">Settings Button</a><span class="rvts6">", and select the "</span><span class="rvts30">C:\SDXModding\Game\Working</span><span class="rvts6">".</span></p>
+<p class="rvps16"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps8"><span class="rvts0"><span class="rvts23">"</span></span><a name="" Unhandled="" Exception:="" System.IO.FileNotFoundException:="" Could="" not="" find="" file="" C:="" SDXModding="" SDX_0.7.0="" Backups="" Days="" To="" Die="" DaysToDie_Data="" Managed="" Assembly-CSharp.dll=""></a>
+<span class="rvts0"><span class="rvts44">Unhandled Exception: System.IO.FileNotFoundException: Could not find file 'C:\SDXModding\SDX_0.7.0\Backups\7 Days To Die\7DaysToDie_Data\Managed\Assembly-CSharp.dll'.</span></span></h1>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps16"><img alt="" style="padding : 1px;" src="lib/NewItem68.png"></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps16"><span class="rvts45">The above error is telling you that the FileNotFoundException was thrown. If you read the whole path, you'll see that it cannot find the Assembly-CSharp.dll. This can happen if the "Backup" folder exists, but the DLL doesn't. If you had a previous SDX Launcher failure, it could have created the Backup folder, but did not actually make a back up.</span></p>
+<p class="rvps16"><span class="rvts45"><br/></span></p>
+<p class="rvps16"><span class="rvts45">To Fix: &nbsp;Click on the "</span><a class="rvts47" href="SDXLauncherMenu.html">Actions</a><span class="rvts45">" menu, and click "</span><span class="rvts46">Delete Backup</span><span class="rvts45">".</span></p>
+<p class="rvps16"><span class="rvts45"><br/></span></p>
+<p class="rvps16"><img alt="" style="padding : 1px;" src="lib/NewItem69.png"></p>
+<p class="rvps16"><span class="rvts45"><br/></span></p>
+<p class="rvps16"><span class="rvts45">Click on "Yes" in the "Are you sure you want to "Delete Backups"</span></p>
+<p class="rvps16"><span class="rvts45"><br/></span></p>
+<p class="rvps16"><img alt="" style="padding : 1px;" src="lib/NewItem70.png"></p>
+<p class="rvps16"><span class="rvts45"><br/></span></p>
+<p class="rvps16"><span class="rvts45">Once clicked on "Yes", the back up folder is cleared.</span></p>
+<p class="rvps16"><span class="rvts45"><br/></span></p>
+<p class="rvps16"><img alt="" style="padding : 1px;" src="lib/NewItem71.png"></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<h1 class="rvps8"><span class="rvts0"><span class="rvts44">"Unhandled Exception: System.IO.FileNotFoundException: Could not find file 'C:\SDXModding\Game\Working\7DaysToDie_Data\Managed\Mods.dll'.</span></span></h1>
+<h1 class="rvps17"><span class="rvts0"><span class="rvts44">File name: 'C:\SDXModding\Game\Working\7DaysToDie_Data\Managed\Mods.dll'"</span></span></h1>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem76.png"></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45">The above error is saying that "Could not find file", which points to the Mods.dll. You can copy the Mods.dll file from "C:\SDXModding\SDX_0.7.0\Mods.dll" to "C:\SDXModding\Game\Working\7DaysToDie_Data\Managed"</span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<h1 class="rvps8"><span class="rvts0"><span class="rvts44">Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object.</span></span></h1>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem77.png"></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45">This error indicates there was an NullReference Exception. Note, this was after the Backup, and beginning the SDX compile. </span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45">To Fix: &nbsp;You will need to Delete the Working folder.</span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45">Open up Explorer and go to "C:\SDXModding\Game"</span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem78.png"></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45">Right click on "Working", and select "Delete"</span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem79.png"></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45">Then click on "Yes"</span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem80.png"></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><a class="rvts47" href="MakingaCleanBackup.html#Once%20it's%20finished,%20we'll%20rename%20the%20folder%20to%20%22Clean%20Install%22.%20Right%20click%20on%20%227%20Days%20To%20Die%22%20in%20the%20%22C:%5CSDXModding%5CGame%5C%22%20folder,%20and%20select%20%22Rename%22">Re-Copy the "Clean Install" folder.</a></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45">In the SDX Launcher, click on the "Actions" menu, and click on "Delete Backup".</span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
