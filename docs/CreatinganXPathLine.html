@@ -97,7 +97,7 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">The XML portion of the Bigger Back Pack mod can be a bit confusing, because of the xpath.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">I recommend using a site like</span><a class="rvts21" href="https://xmltoolbox.appspot.com/xpath_generator.html"> https://xmltoolbox.appspot.com/xpath_generator.html</a><span class="rvts6"> to help generate your xpath. You will still need to make some changes, but it'll go a long way.</span></p>
+<p class="rvps2"><span class="rvts6">I recommend using a site like</span><a class="rvts20" href="https://xmltoolbox.appspot.com/xpath_generator.html"> https://xmltoolbox.appspot.com/xpath_generator.html</a><span class="rvts6"> to help generate your xpath. You will still need to make some changes, but it'll go a long way.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem206.png"></p>
@@ -119,7 +119,7 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Let's fix it:</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps5"><span class="rvts23">/windows/window[@name='HUDLeftStatBars']/grid[@name="hud"]//rect[1]@controller</span></p>
+<p class="rvps5"><span class="rvts21">/windows/window[@name='HUDLeftStatBars']/grid[@name="hud"]//rect[1]@controller</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">The @name= allows us to specify the name string. For this example, we want to specify exactly HUDleftStatBars. If this window ever changes spots in the future, the xpath with the name will still return the right window, while the generated one would likely fail.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
@@ -127,19 +127,19 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">The rect[1] value, however, does need to be fixed. For this, we don't have a name attribute, so we need to find another unique attribute to use. </span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps5"><span class="rvts23"> &lt;rect width="168" height="43" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}"&gt;</span></p>
+<p class="rvps5"><span class="rvts21"> &lt;rect width="168" height="43" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}"&gt;</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Width, Height, Controller, and visible are not unique, as other &lt;Rect&gt; nodes have it. But the stat_type is unique.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Let's flesh it out:</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps5"><span class="rvts23">/windows/window[@name='HUDLeftStatBars']/grid[@name="hud"]//rect[@stat_type="Stamina"]@controller</span></p>
+<p class="rvps5"><span class="rvts21">/windows/window[@name='HUDLeftStatBars']/grid[@name="hud"]//rect[@stat_type="Stamina"]@controller</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">By default, that website uses double quotes to wrap around strings. We'll want to change those to single quotes, as our entire xpath will be wrapped around double quotes.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">If we wanted to change that line, our Config xpath command would look like this:</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps15"><span class="rvts6">&lt;set xpath="</span><span class="rvts23">/windows/window[@name='HUDLeftStatBars']/grid[@name='hud']//rect[@stat_type='Stamina']@controller"&gt;HUDStatBar2&lt;/set&gt;</span></p>
+<p class="rvps13"><span class="rvts6">&lt;set xpath="</span><span class="rvts21">/windows/window[@name='HUDLeftStatBars']/grid[@name='hud']//rect[@stat_type='Stamina']@controller"&gt;HUDStatBar2&lt;/set&gt;</span></p>
 <p></p>
 <p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
 
