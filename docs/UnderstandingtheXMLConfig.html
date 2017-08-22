@@ -1,0 +1,187 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Understanding the XML Config</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("UnderstandingtheXMLConfig");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Understanding the XML Config</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="SDXIntermediateTutorial.html">SDX Intermediate Tutorial</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SDXIntermediateTutorial.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="AddingtheBiggerBackPackMod.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="UnderstandingthePatchScript.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts13">Config\BiggerBackPack.xml:</span></span></h2>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This mod makes two changes to files that the other SDX Mods haven't shown you yet. The Windows.xml under the XUi, and the xui.xml file under the Config folder.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts25">&lt;configs&gt;</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;config name="XUi/windows"&gt;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;!-- Back pack dimensions are set for 5 x 9, based on a 45 slot back pack --&gt;</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@rows"&gt;5&lt;/set&gt;</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cols"&gt;9&lt;/set&gt;</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;!-- changing the scale of the panel to better fit --&gt;</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;config name="xui"&gt;</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;set xpath="/xui/ruleset[@name='default']/@stackpanel_scale"&gt;1.03&lt;/set&gt;</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts25">&lt;/configs&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Notice we are using &lt;config name="XUi/windows"&gt; ? This lets SDX know that the windows.xml file is to be searched under the XUI folder. By default, SDX will search for the Data/Config/*.xml files, so for any subfolders off of Data/Config, you'll need to specify the folder name.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The next part about this Config is the &lt;set xpath&gt; line. This line lets us change</span><span class="rvts12"> individual attributes</span><span class="rvts6"> in XML nodes, rather than adding a new recipe or block, as we did in the other examples. The Lines look scary, but it's not that bad! It allows us a very precise change in XML files.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Let's break it down:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts25">&lt;set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@rows"&gt;5&lt;/set&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="281" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">/windows</span></p>
+</td>
+<td width="1083" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Top level node in the file &lt;/windows&gt;</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="281" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">/window[@name='windowBackpack']</span></p>
+</td>
+<td width="1083" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Look for the &lt;window&gt; that has a name of "windowBackpack"</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="281" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">/panel[@name='content']</span></p>
+</td>
+<td width="1083" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Look for the &lt;panel&gt; tag that has the name of 'content', that's inside of the above window</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="281" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">/grid[@name='inventory']</span></p>
+</td>
+<td width="1083" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Look for the &lt;grid&gt; tag with the name inventory, that's inside of the above panel</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="281" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">/@rows</span></p>
+</td>
+<td width="1083" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Look for the rows attribute</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">There's a website that'll help you building your more complicated xpath:</span><a class="rvts19" href="https://xmltoolbox.appspot.com/xpath_generator.html"> https://xmltoolbox.appspot.com/xpath_generator.html</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
