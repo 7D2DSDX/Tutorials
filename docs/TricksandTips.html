@@ -96,11 +96,11 @@
 <p class="rvps2"><span class="rvts6">Now that you've completed the Beginner Tutorial successfully, it's time to let you in on some tricks and tips.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><a class="rvts19" href="Buildingforthefirsttime.html">Building for the first time</a><span class="rvts6"> step walked you through how to trigger your first SDX build. At first, we didn't enable the Katana mod, so </span><span class="rvts12">nothing</span><span class="rvts6"> happened, right?</span></p>
+<p class="rvps2"><a class="rvts21" href="Buildingforthefirsttime.html">Building for the first time</a><span class="rvts6"> step walked you through how to trigger your first SDX build. At first, we didn't enable the Katana mod, so </span><span class="rvts12">nothing</span><span class="rvts6"> happened, right?</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Actually, the SDX Launcher </span><span class="rvts12">did</span><span class="rvts6"> do something to the Assembly-CSharp.dll even without using any SDX mods, and that was instrumenting it with some handy SDX hooks. The initial hooks that SDX does every time it builds, regardless of mods enabled, is to allow loading the unity3d bundles for adding textures.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<h2 class="rvps9"><span class="rvts0"><span class="rvts47">Adding new Resources</span></span></h2>
+<h2 class="rvps8"><span class="rvts0"><span class="rvts47">Adding new Resources</span></span></h2>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">With these hooks, it's now possible to just copy the KatanaSample's Resource file, michonnekatana.unity3d, into the "</span><span class="rvts12">Working\Mods\SDX\Resources\"</span><span class="rvts6"> folder, and reference it in your XML files, adding a new item as you would with traditional XML edits. The property Meshfile is changed to point to #michonnekatana?katana. &nbsp;</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
@@ -127,8 +127,8 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">You can continue to do that, dropping the unity3d bundles into the Resources folder, and making references to the Meshfile, without using the SDX Launcher again.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<h2 class="rvps9"><span class="rvts0"><span class="rvts47">Using Non-Vanilla Files as a Base</span></span></h2>
-<p class="rvps2"><span class="rvts27"><br/></span></p>
+<h2 class="rvps8"><span class="rvts0"><span class="rvts47">Using Non-Vanilla Files as a Base</span></span></h2>
+<p class="rvps2"><span class="rvts25"><br/></span></p>
 <p class="rvps2"><span class="rvts6">For our examples, we have been using the vanilla XML files as a base. This makes a good, consistent starting point to get you comfortable with SDX without getting too overwhelmed.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">But that's not the only way you can enjoy SDX mods, nor does it mean you have to piece together a mod yourself. If you have an existing XML mod that you want to use, such as Clockwork Project, or Valmar Overhaul, you can use those mods as a base file. </span></p>
@@ -136,39 +136,39 @@
 <p class="rvps2"><span class="rvts6">All you need to do is install the mod, as per the modders instructions, into your Working folder. Verifying the Mod works as-is, and run it through the SDX Launcher. From there, you can copy and paste unity3d files into the Resources folder, and update the XML files to use the new Meshfile.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<h2 class="rvps9"><span class="rvts0"><span class="rvts47">The Mods/KatanaSample/Config/ Folder</span></span></h2>
-<p class="rvps2"><span class="rvts27"><br/></span></p>
+<h2 class="rvps8"><span class="rvts0"><span class="rvts47">The Mods/KatanaSample/Config/ Folder</span></span></h2>
+<p class="rvps2"><span class="rvts25"><br/></span></p>
 <p class="rvps2"><span class="rvts6">In our examples, we included a Config/Katana.xml</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
 <tr valign="top">
-<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts25">&lt;configs&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;!-- &nbsp;This tells SDX to add to the Items.xml --&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;config name="items"&gt;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;!-- This tells SDX to add the following Items to the bottom of the Items list --&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;append xpath="/items"&gt;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts25"><br/></span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;!-- New item will be Katana --&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;item id="" name="katanamichonne"&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;!-- Extend it from the machete, but add the custom mesh --&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;property name="Extends" value="machete"/&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;property name="Meshfile" value="#michonnekatana?katana" /&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;/item&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;/append&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;/config&gt;</span></p>
-<p class="rvps2"><span class="rvts25">&lt;/configs&gt;</span></p>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts23">&lt;configs&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;!-- &nbsp;This tells SDX to add to the Items.xml --&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;config name="items"&gt;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;!-- This tells SDX to add the following Items to the bottom of the Items list --&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;append xpath="/items"&gt;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts23"><br/></span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;!-- New item will be Katana --&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;item id="" name="katanamichonne"&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;!-- Extend it from the machete, but add the custom mesh --&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;property name="Extends" value="machete"/&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;property name="Meshfile" value="#michonnekatana?katana" /&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;/item&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;/append&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts23">&lt;/configs&gt;</span></p>
 </td>
 </tr>
 </table>
 </div>
-<p class="rvps2"><span class="rvts27"><br/></span></p>
+<p class="rvps2"><span class="rvts25"><br/></span></p>
 <p class="rvps2"><span class="rvts6">It's actually optional in SDX to need a Config/ folder. Once you add in your SDX hooks, you can edit the XML files as you normally would. Be sure to edit your mod.xml file and comment out the Config line:</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
 <tr valign="top">
-<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;config_mods&gt;</span></p>
-<p class="rvps2"><span class="rvts25"></span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">&lt;!--import file="Config\Katana.xml" /--&gt;</span></p>
-<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp;&lt;/config_mods&gt;</span></p>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;config_mods&gt;</span></p>
+<p class="rvps2"><span class="rvts23"></span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">&lt;!--import file="Config\Katana.xml" /--&gt;</span></p>
+<p class="rvps2"><span class="rvts23"> &nbsp; &nbsp;&lt;/config_mods&gt;</span></p>
 </td>
 </tr>
 </table>
