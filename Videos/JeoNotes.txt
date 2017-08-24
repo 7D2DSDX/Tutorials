@@ -1,0 +1,153 @@
+Recipe list lag found?
+
+STOP THE PRESSES!!! The fix is in!
+
+// XUiC_RecipeList <-- Change search from len > 0 to len > 2 (1 function, obfuscated)
+// XUiC_WorkstationWindowGroup <-- Delete all areas where the game sets all workstation windows to dirty (5 functions, obfustaced). Leave on Open and Close functions.
+// XUiC_WorkstationOutputGrid.UpdateBackend <-- Delete setting all children dirty
+// XUiC_WorkstationInputGrid.UpdateBackend <-- Delete setting all children dirty
+// XUiC_WorkstationFuelGrid.UpdateBackend <-- Delete setting all children dirty
+// XUiC_WorkstationToolGrid.UpdateBackend <-- Delete setting all children dirty
+
+This needs more testing. Preliminary testing on vanilla and SDX both show no major problems. Recipes update as they should. Some lag remains when changing backpack/toolbar inventory, and when opening and closing the workstation, but this is manageable. Lag seems to be completely gone and the menus are completely responsive. This should not affect anything outside the user inteface, but, again, more testing is needed.
+
+Some errors occur when smelting. 
+
+Second Version:
+
+// XUiC_RecipeList
+// Changed to check length on input. Entering any length string and clicking "search" works as normal
+.method private hidebysig 
+	instance void IWF (
+		class XUiController '',
+		string ''
+	) cil managed 
+{
+	// Method begins at RVA 0x1e8e5c
+	// Code size 26 (0x1a)
+	.maxstack 8
+
+	IL_0000: ldarg.2
+	IL_0001: callvirt instance int32 [mscorlib]System.String::get_Length()
+	IL_0006: ldc.i4.0
+	IL_0007: ble.s IL_0012
+
+	IL_0009: ldarg.2
+	IL_000a: callvirt instance int32 [mscorlib]System.String::get_Length()
+	IL_000f: ldc.i4.3
+	IL_0010: blt.s IL_0019
+
+	IL_0012: ldarg.0
+	IL_0013: ldarg.2
+	IL_0014: call instance void XUiC_RecipeList::DWF(string)
+
+	IL_0019: ret
+} // end of method XUiC_RecipeList::IWF
+
+
+// XUiC_WorkstationOutputGrid
+// Removed SetAllChildrenDirty() method. Remains on Tool Grid.
+protected override void UpdateBackend(ItemStack[] stackList)
+{
+	base.UpdateBackend(stackList);
+	this.workstationData.SetOutputStacks(stackList);
+}
+
+
+// XUiC_WorkstationWindowGroup
+// Sets self as dirty instead of setting all children as dirty.
+
+private void KVF()
+{
+	if (this.GJO != null)
+	{
+		this.GJO.SetSlots(this.WorkstationData.GetOutputStacks());
+		this.IsDirty = true;
+	}
+}
+
+private void MVF()
+{
+	if (this.KJO != null)
+	{
+		this.KJO.SetSlots(this.WorkstationData.GetFuelStacks());
+		this.IsDirty = true;
+	}
+}
+
+private void XVF()
+{
+	if (this.VJO != null)
+	{
+		this.VJO.SetSlots(this.WorkstationData.GetInputStacks());
+		this.IsDirty = true;
+	}
+}
+
+// Added new function to MaterialBlock -> public static String GetParticle()
+.method public hidebysig 
+	instance string GetParticle () cil managed 
+{
+	// Method begins at RVA 0xa9ef0
+	// Code size 51 (0x33)
+	.maxstack 8
+
+	IL_0000: ldarg.0
+	IL_0001: ldfld string MaterialBlock::ParticleCategory
+	IL_0006: brfalse.s IL_000f
+
+	IL_0008: ldarg.0
+	IL_0009: ldfld string MaterialBlock::ParticleCategory
+	IL_000e: ret
+
+	IL_000f: ldarg.0
+	IL_0010: ldfld string MaterialBlock::SurfaceCategory
+	IL_0015: brfalse.s IL_001e
+
+	IL_0017: ldarg.0
+	IL_0018: ldfld string MaterialBlock::SurfaceCategory
+	IL_001d: ret
+
+	IL_001e: ldarg.0
+	IL_001f: ldfld string ['Assembly-CSharp.dll']MaterialBlock::id
+	IL_0024: brfalse.s IL_002d
+
+	IL_0026: ldarg.0
+	IL_0027: ldfld string ['Assembly-CSharp.dll']MaterialBlock::id
+	IL_002c: ret
+
+	IL_002d: ldstr "stone"
+	IL_0032: ret
+} // end of method MaterialBlock::GetParticle
+
+// Changed "Hit" call to call GetParticle() instead of grabbing the id directly
+// ItemActionMelee
+protected virtual void hitTheTarget(ItemActionMelee.InventoryDataMelee _actionData, WorldRayHitInfo hitInfo)
+{
+	float staminaMultiplier = _actionData.invData.holdingEntity.GetStaminaMultiplier();
+	ItemValue itemValue = _actionData.invData.itemValue;
+	float weaponCondition = 1f;
+	if (_actionData.invData.itemValue.MaxUseTimes > 0)
+	{
+		weaponCondition = (float)(_actionData.invData.itemValue.MaxUseTimes - itemValue.UseTimes) / (float)_actionData.invData.itemValue.MaxUseTimes;
+	}
+	float num = _actionData.invData.item.CritChance.Value;
+	if (num > 0f)
+	{
+		float num2 = (float)(_actionData.invData.holdingEntity.Stamina - 50) / 500f;
+		num = Mathf.Clamp01(num + num2);
+	}
+	ItemActionAttack.Hit(_actionData.invData.world, hitInfo, _actionData.invData.holdingEntity.entityId, (this.DamageType != EnumDamageSourceType.Undef) ? this.DamageType : EnumDamageSourceType.Melee, base.GetDamageBlock(itemValue, _actionData.invData.holdingEntity as EntityPlayer), base.GetDamageEntity(itemValue, _actionData.invData.holdingEntity as EntityPlayer), staminaMultiplier, weaponCondition, num, this.getDismembermentBaseChance(_actionData), this.getDismembermentBonus(_actionData), this.item.MadeOfMaterial.GetParticle(), this.damageMultiplier, this.getBuffActions(_actionData), _actionData.attackDetails, this.ActionExp, this.ActionExpBonusMultiplier, this, this.ToolBonuses, (!_actionData.bHarvesting) ? ItemActionAttack.EnumAttackMode.RealNoHarvesting : ItemActionAttack.EnumAttackMode.RealAndHarvesting);
+	GameUtils.HarvestOnAttack(_actionData, this.ToolBonuses);
+}
+
+// In ItemActionAttack::Hit, changed Utils.FastMax(0, num4) to Mathf.Round(num4)
+// Excerpt:
+
+float num4 = _attackDetails.damagePerHit * _staminaDamageMultiplier;
+		num4 = ItemActionAttack.DegradationModifier(num4, _weaponCondition);
+		num4 = Mathf.Round(num4);
+		
+
+
+	
