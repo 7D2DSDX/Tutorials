@@ -1,0 +1,179 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Reviewing the Folder Structure</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ReviewingtheFolderStructure");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Reviewing the Folder Structure</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="SDXAdvancedTutorial.html">SDX Advanced Tutorial</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SDXAdvancedTutorial.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="NeonLightMod.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="UnderstandingtheScripts.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">The Neon Light mod adds in custom XML, custom Icon, custom Resource, and custom Scripts to the game.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem250.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">We've already covered the Configs folder, but we'll touch base again with it to show how three08 is using it, and more precisely, what he's added.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts21">&lt;configs&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;config name="blocks"&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;append xpath="/blocks"&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;block id="1630" name="Neon Open Sign"&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="Extends" value="ceilingLight02_player" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="CustomIcon" value="openSign" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="Class" value="NeonSign, Mods" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="Model" value="#NeonSign?NeonOpenSignPrefab"/&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="Collide" value="movement,melee,rocket" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="HandleFace" value="South" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="TakeDelay" value="5" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="AllowRemotePower" value="false" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="LightObject" value="NeonText" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;/block&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &lt;!-- Snipped contents --&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Three08's Neon Sign mod contains a few new blocks and recipes. In the one above, he's Extending the ceilingLight02_player block.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">He's also referencing a CustomIcon, which we will find under the Icons folder. Even the Model value looks familiar, making a reference to the #Neon?NeonOpenSignPrefab &nbsp;( #Neon = Filename is Neon.Unity3d, and NeonOpenSignPrefab is the asset in it ).</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">What is different, </span><span class="rvts12">is the "Class" line</span><span class="rvts6">. It's referencing "NeonSign, Mods". That tells the game that there's special code to be run for it, located in the Mods.dll, called NeonSign. We'll go over this new NeonSign Class in the next section.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Icons and Resources folders, as we've shown previously, contains the custom icons and unity3d files for the mod.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem252.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">So three08 added 4 new custom icons for the game, with only one unity3d file (shown below). In our previous examples, there's was usually just one model in each unity3d file. However, that doesn't mean that there can't be more. A unity3d bundle can have many custom models embedded in it, being referenced individually using the ?&lt;model name&gt; reference, while keeping the #&lt;BundleName&gt; the same.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you look at the Neon Sign XML file, you'll see the following references. We only copied the relevant lines, rather then entire blurb.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;property name="Model" value="#NeonSign?BowlingNeonSignPrefab"/&gt;</span></p>
+<p class="rvps2"><span class="rvts6">&lt;property name="Model" value="#NeonSign?NeonOpenSignPrefab"/&gt;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">&lt;property name="Model" value="#NeonSign?NeonOpenSign2Prefab"/&gt;</span></p>
+<p class="rvps2"><span class="rvts6">&lt;property name="Model" value="#NeonSign?PizzaSignPrefab"/&gt;</span></p>
+<p class="rvps2"><span class="rvts6">&lt;property name="Model" value="#NeonSign?GunNeonSignPrefab"/&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">So we see in his Mod that he actually has 5 custom models, and they are all stored in the same unity3d file.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem253.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Scripts folder, however, is new for us.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem255.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Let's explore on what these files are, and how they are different than the PatchScripts in the Bigger Back Pack Mod.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/create-epub-ebooks">Produce electronic books easily</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

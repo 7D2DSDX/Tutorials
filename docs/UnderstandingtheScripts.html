@@ -1,0 +1,202 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Understanding the Scripts</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("UnderstandingtheScripts");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Understanding the Scripts</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="SDXAdvancedTutorial.html">SDX Advanced Tutorial</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SDXAdvancedTutorial.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="ReviewingtheFolderStructure.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="SDXXPathConfigurations.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">Under the Scripts folder, you'll see you files: </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">BlockNeonSign.cs and NeonSignControl.cs.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem256.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Let's open BlockNeonSign.cs using your favorite text editor. In the example below, we are using Visual Studio, and collapsing all the methods so we just need to see their names.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem257.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">We are not going to cover all of three08's lines of code, since this isn't a C# Tutorial, but we'll cover the important parts.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts21">using System;</span></p>
+<p class="rvps2"><span class="rvts21">using UnityEngine;</span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts21">public </span><span class="rvts32">class BlockNeonSign</span><span class="rvts21"> : </span><span class="rvts33">BlockPowered</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The "public class BlockNeonSign : BlockPowered" is the key part we are looking at. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">BlockNeonSign is three08's class that he wrote, and is called a </span><span class="rvts12">derived</span><span class="rvts6"> class.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">BlockPowered is the </span><span class="rvts12">base </span><span class="rvts6">class, which means it's actual code in in the base game.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Because BlockNeonSign is derived from the BlockPowered class, it has all the abilities of the base class of BlockPowered. By making a </span><span class="rvts12">derived</span><span class="rvts6"> class, three08 is saying "I want to do everything that the BlockPowered class does, but I want to make changes to some things'. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem258.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you look above, you can see some calls with the keyword "</span><span class="rvts12">override</span><span class="rvts6">", such as "OnBlockActivated", and "OnBLockEntityTransformBeforeActivated". That keyword indicates that the base class, BlockPowered, has those functions, and that three08 wants to make changes to those. The methods that do not have override as a keyword, is new functionality that three08 added.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">By extending a class, three08 gets all the functionality of an existing class, without copying or duplicating it, and changing the methods that he wants to behave differently.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Three08's OnBlockActivated:</span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem259.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Base Game OnBlockActivated:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem260.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">So the base class for BlockPowered doesn't do anything when OnBlockActivated is called. However, Three08 wanted to do something. In his method, he makes a quick check to see if the block is within your Land Claim area. If it isn't, then do anything. However, if it is within your land claim block, he let's you pick up the Neon Sign.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">That was a simple override example. So why did he choose to override OnBlockActivated? The default BlockPowered was not a block you could pick up once your placed it, however, three08 wanted all the benefits of the powered block, but also wanted the ability to pick it up too. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If he had decided to use a PatchScript to allow his blocks to be picked up, he would have had to make all the BlockPowered blocks have the same feature. With this change, only his powered Neon Lights are able to be picked up.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">He over-rides another method too, called "OnBlockEntityTransformBeforeActivated". He wrote more code in this method than the first one, as its more complicated. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem262.png"><span class="rvts6"> </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In this method, he's doing a few interesting things:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">this</span><span class="rvts34">.shape.OnBlockEntityTransformBeforeActivated(_world, _blockPos, _cIdx, _blockValue, _ebcd);</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">His first line in his method call is calling this. He's telling the game that he wants still do everything that base class does. But he wants to do more with it after the base class is done.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Let's take a look at the other interesting thing being done in this method:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem263.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">He's calling another class, called NeonSignControl. If we look back in the Scripts folder, we'll see the other C# script called NeonSignControl.cs. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Let's take a look at the NeonSignControl.cs</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem265.png"></p>
+<p class="rvps2"><span class="rvts6">In his class, he's only using a base class of MonoBehaviour. It has a few methods, such as Awake and Update. These method names are special for MonoBehaviour, in that when a game tick occurs, it will call the Update() method calls for each class that is connected to it. In this case, each tick, the Update() call of the NeonSignControl executes.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Let's take a quick look at the Update() method call to see what's it's doing.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem266.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> </span></p>
+<p class="rvps2"><span class="rvts6">The first thing it does is check to see if the NeonLight is currently powered or not. If it's not, don't both doing anything else. However, if it is connected to power, than the light is active.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The next section of the code deals with flashing the neon lights on and off. This allows the Neon Lights to flicker on and off.</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/create-epub-ebooks">Write EPub books for the iPad</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

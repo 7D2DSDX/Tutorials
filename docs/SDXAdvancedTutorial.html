@@ -70,7 +70,7 @@
 				
 				
 				
-				<a href="AbouttheViewSwayandBob.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="NeonLightMod.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -86,18 +86,21 @@
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
 <h2 class="rvps11"><span class="rvts0"><span class="rvts13">The SDX Advanced Tutorial assumes you have already followed the </span></span><span class="rvts0"><a class="rvts24" href="InitialSetup.html">"Getting Set up"</a></span><span class="rvts0"><span class="rvts13"> guide, and completed the </span></span><span class="rvts0"><a class="rvts24" href="SDXBeginnerTutorial.html">SDX Beginner Tutorial</a></span><span class="rvts0"><span class="rvts13"> and </span></span><span class="rvts0"><a class="rvts24" href="SDXIntermediateTutorial.html">SDX Intermediate Tutorial</a></span><span class="rvts0"><span class="rvts13">.</span></span></h2>
 <p class="rvps5"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">In our Beginner Tutorial examples, we added in the Katana and a Cube block to the game. These mods added a new unity3d model, and made some XML changes. What it didn't do, was change or add any functionality in the game.</span></p>
+<p class="rvps2"><span class="rvts6">In the Bigger Back Pack mod, we went over the PatchScripts, and how they were added to the Assembly-CSharp.dll during SDX compile time. Those changes, if you remember, were added inside of the game's DLL.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">There's two types of coding that can be added in by SDX: &nbsp;PatchScripts and Scripts.</span></p>
+<p class="rvps2"><span class="rvts6">Scripts, on the other hand, are compiled into a Mods.dll, and loaded ruing run-time. When the game loads, the Mods.dll is injected into the Assembly-CSharp.dll.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts17">PatchScripts</span><span class="rvts6"> are code that is added as part of the Build process, and make changes directly in the Assembly-CSharp.dll, or more precisely, they </span><span class="rvts12">patch</span><span class="rvts6"> the Assembly-CSharp.dll. PatchScripts are meant to update or change base game features.</span></p>
+<p class="rvps2"><span class="rvts6">Besides when and how they are loaded, how are they different? And why are they different?</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts17">Scripts</span><span class="rvts6"> are code that are compiled into the Mods.dll, and loaded at when the game starts. Scripts are meant to add new classes and functionality, often extending the base game.</span></p>
+<p class="rvps2"><span class="rvts6">PatchScripts, as we've mentioned before, changes how the base game does things. In our previous examples, we increased storage by adjusting a few pieces of code in the game, and the XML. If you are only doing small adjustments, like we did for the bigger back pack mod, then PatchScripts are fine, and preferred way. However, if we wanted to do more, then PatchScripts would be tedious, and limited to changing existing code.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">For the Advanced Tutorial, we'll explore the Scripts by adding in ZehMatt's View Sway / Bob Smoothed Mod.</span></p>
+<p class="rvps2"><span class="rvts6">But what if we wanted to do more with our mods? We aren't limited to just adjusting the way the base game behaves with SDX. Rather, we can use the Scripts functionality to add completely new objects into the game, including new animations, new blocks triggers, and new ways of interacting with the world.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For the Advanced Tutorial, we'll explore the Scripts by adding in Three08's Neon Sign Mod.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts13">Note: The Advanced Tutorial covers C# .NET code, and it's assumed the reader has at least some understanding of the concepts in C#.</span></span></h2>
 <p></p>
 <p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
 

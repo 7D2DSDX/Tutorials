@@ -173,59 +173,64 @@ span.rvts31
 }
 span.rvts32
 {
- font-size: 12pt;
- font-family: 'Times New Roman', 'Times', serif;
- color: #dcdcdc;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #00bfbf;
 }
 span.rvts33
 {
- font-size: 12pt;
  font-family: 'Courier New', 'Courier', monospace;
- color: #dcdcdc;
+ color: #588877;
 }
 span.rvts34
 {
- font-family: 'Courier New', 'Courier', monospace;
- background-color: #ffff00;
+ font-size: 9.5pt;
+ font-family: 'Consolas';
+ color: #000000;
 }
 span.rvts35
+{
+ font-size: 9.5pt;
+ font-family: 'Consolas';
+ color: #0000ff;
+}
+span.rvts36
 {
  font-size: 16pt;
  font-weight: bold;
  text-decoration: underline;
 }
-span.rvts36
+span.rvts37
 {
  font-size: 14pt;
  font-weight: bold;
  color: #365f91;
 }
-span.rvts37
+span.rvts38
 {
  font-size: 13pt;
  font-weight: bold;
  color: #4f81bd;
 }
-a.rvts38, span.rvts38
+a.rvts39, span.rvts39
 {
  font-size: 13pt;
  font-weight: bold;
  color: #0000ff;
  text-decoration: underline;
 }
-a.rvts38:hover { color: #0000ff; }
-span.rvts39
+a.rvts39:hover { color: #0000ff; }
+span.rvts40
 {
  font-size: 14pt;
  color: #3a3a3a;
 }
-span.rvts40
+span.rvts41
 {
  font-size: 23pt;
  font-weight: bold;
  color: #3a3a3a;
 }
-a.rvts41, span.rvts41
+a.rvts42, span.rvts42
 {
  font-size: 14pt;
  font-style: italic;
@@ -233,37 +238,45 @@ a.rvts41, span.rvts41
  color: #3a3a3a;
  text-decoration: underline;
 }
-span.rvts42
+span.rvts43
 {
  font-size: 14pt;
  font-style: italic;
  font-weight: bold;
  color: #3a3a3a;
 }
-span.rvts43
+a.rvts44, span.rvts44
+{
+ font-size: 15pt;
+ font-style: italic;
+ font-weight: bold;
+ color: #333333;
+ text-decoration: underline;
+}
+span.rvts45
 {
  font-size: 16pt;
  font-weight: bold;
  color: #404040;
 }
-span.rvts44
+span.rvts46
 {
  font-size: 12pt;
  color: #404040;
 }
-a.rvts45, span.rvts45
+a.rvts47, span.rvts47
 {
  font-size: 12pt;
  color: #114491;
  text-decoration: underline;
 }
-span.rvts46
+span.rvts48
 {
  font-size: 12pt;
  font-weight: bold;
  color: #404040;
 }
-a.rvts47, span.rvts47
+a.rvts49, span.rvts49
 {
  font-size: 16pt;
  font-style: italic;
@@ -271,18 +284,12 @@ a.rvts47, span.rvts47
  color: #404040;
  text-decoration: underline;
 }
-span.rvts48
+span.rvts50
 {
  font-size: 16pt;
  font-style: italic;
  font-weight: bold;
  color: #404040;
-}
-span.rvts49
-{
- font-family: 'Verdana', 'Geneva', sans-serif;
- color: #ffd700;
- background-color: #000000;
 }
 /* ========== Para Styles ========== */
 p,ul,ol /* Paragraph Style */
