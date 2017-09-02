@@ -1,0 +1,218 @@
+﻿
+
+<html>
+	
+<head>
+	<title>mod.xml</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("modxml");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">mod.xml</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="SDXAndModStandards.html">SDX And Mod Standards</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SDXAndModStandards.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="SDXAndModStandards.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="ModStructure.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">The mod.xml contains information about the mod. Not only does it show up in the SDX Launcher, but will also show up in some of the support tools we are rolling out.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts21">&lt;mod&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;info&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- Information about the Mod, the author and version information --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- These are displayed in the SDX Launcher --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;author&gt;sphereii&lt;/author&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;name&gt;Bigger Back Pack&lt;/name&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;description&gt;Bigger Back Pack SDX Mod 5x9 45&lt;/description&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;mod_version&gt;1.0&lt;/mod_version&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;game_version&gt;16.2&lt;/game_version&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;launcher_version&gt;0.0.0&lt;/launcher_version&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;type&gt;Mod&lt;/type&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;/info&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- This references any config files that SDX needs to merge into your files --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;config_mods&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;import file="Config\BiggerBackPack.xml" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp;&lt;/config_mods&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts21">&lt;/mod&gt;&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Author: The one who wrote or put together the mod</span></p>
+<p class="rvps2"><span class="rvts6">Name: The unique name for the Mod. This shows up in the SDX Launcher.</span></p>
+<p class="rvps2"><span class="rvts6">Description: Short description of the Mod</span></p>
+<p class="rvps2"><span class="rvts6">Mod Version: The version number here is in a Major.Minor example.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;If your mod is relatively small, it is recommended to use a two digit version system.</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">Major: Complete overhaul, such as going from Alpha 15 to Alpha 16.</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">Minor: Minor tweaks, such as going from Alpha 16.2 or Alpha 16.3, and for bug fixes as well.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;For larger, more comphrensive Mods, or if you would like more fine tuning of a version, you may opt to do a Major.Minor.Defect.</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">Major: Complete overhaul, such as going from Alpha 15 to Alpha 16.</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">Minor: Minor Tweaks, such as going from Alpha 16.2 to Alpha 16.3</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">Defect: Bug fixes</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">game_version: The latest version of the Game which the mod was tested and found to be working.</span></p>
+<p class="rvps2"><span class="rvts6">launcher_version: Which version of SDX Launcher it is compatible. ( Optional )</span></p>
+<p class="rvps2"><span class="rvts6">type: The type of mod package you have:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Type Value</span></p>
+</td>
+<td width="996" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Description</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="377" height="15" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Mod</span></p>
+</td>
+<td width="996" height="15" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A full integrated Mod, maybe include XML, Assets and code.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Sample</span></p>
+</td>
+<td width="996" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A small mod used for demonstration, as opposed to a real mod.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">AssetBundle</span></p>
+</td>
+<td width="996" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A mod with just a Unity Asset Bundle, to introduce new textures and sounds.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">XML</span></p>
+</td>
+<td width="996" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A mod with only XML changes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">QoL</span></p>
+</td>
+<td width="996" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Quality of Life Improvement. Does not add new items or recipes, but rather just makes the game run better.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Icons</span></p>
+</td>
+<td width="996" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A mod that contains just Icons</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Overhaul</span></p>
+</td>
+<td width="996" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A Complete Overhaul Mod, includes many assets and changes.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Expansion</span></p>
+</td>
+<td width="996" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A Complete Expansion; adding new recipes items, but keeping with the spirit of Vanilla</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

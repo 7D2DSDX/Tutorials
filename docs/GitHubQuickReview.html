@@ -1,0 +1,138 @@
+﻿
+
+<html>
+	
+<head>
+	<title>GitHub Quick Review</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("GitHubQuickReview");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">GitHub Quick Review</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="AdvancedTools.html">Advanced Tools</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="AdvancedTools.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="CreatingaSampleCube.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="InstallingandConfiguringGithub.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps17"><a class="rvts49" href="https://www.howtogeek.com/180167/htg-explains-what-is-github-and-what-do-geeks-use-it-for/">Referenced Article</a></p>
+<p class="rvps17"><span class="rvts50"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For us, in the 7 Days To Die Community, Github is the preferred way to host mods and code, that allows free storage, persistent download links, and a versioning system, so you can see how your mod, or your favorite mod, has evolved over time.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This section will show you how to install and set up GitHub Desktop. We've listed a few words you'll see in this section</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts36">Terminology:</span></span></h1>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h4 class="rvps20"><span class="rvts0"><span class="rvts51">Repository: &nbsp;</span></span><span class="rvts0"><span class="rvts11">A repository is the most basic element of GitHub. They're easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private. </span></span></h4>
+<h4 class="rvps20"><span class="rvts0"><span class="rvts53">This allows multipler modders to work together to update the mod, and share it with others.</span></span></h4>
+<h4 class="rvps20"><span class="rvts0"><span class="rvts51">Clone: </span></span><span class="rvts0"><span class="rvts11">A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. With your clone you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. It is, however, connected to the remote version so that changes can be synced between the two. You can push your local changes to the&nbsp;</span></span><span class="rvts0"><a class="rvts52" href="https://help.github.com/articles/github-glossary/#remote">remote</a></span><span class="rvts0"><span class="rvts11">&nbsp;to keep them synced when you're online. </span></span></h4>
+<h4 class="rvps20"><span class="rvts0"><span class="rvts53">A clone makes a local copy so you can download and make changes to it.</span></span></h4>
+<h4 class="rvps20"><span class="rvts0"><span class="rvts51">Commit: </span></span><span class="rvts0"><span class="rvts11">A commit, or "revision", is an individual change to a file (or set of files). It's like when you&nbsp;</span></span><span class="rvts0"><span class="rvts53">save</span></span><span class="rvts0"><span class="rvts11">&nbsp;a file, except with Git, every time you save it creates a unique ID (a.k.a. the "SHA" or "hash") that allows you to keep record of what changes were made when and by who. Commits usually contain a commit message which is a brief description of what changes were made.</span></span></h4>
+<h4 class="rvps20"><span class="rvts0"><span class="rvts53">A commit is just update the files online, for a release or when you've finished making changes you want to share.</span></span></h4>
+<h4 class="rvps20"><span class="rvts0"><span class="rvts51">Fork: </span></span><span class="rvts0"><span class="rvts11">A fork is a personal copy of another user's repository that lives on your account. Forks allow you to freely make changes to a project without affecting the original. Forks remain attached to the original, allowing you to submit a pull request to the original's author to update with your changes. You can also keep your fork up to date by pulling in updates from the original.</span></span></h4>
+<h4 class="rvps20"><span class="rvts0"><span class="rvts53">A fork lets you make changes, or fixes, and then you can send them back to the original author for them to add them.</span></span></h4>
+<h4 class="rvps20"><span class="rvts0"><span class="rvts51">Organizations: </span></span><span class="rvts0"><span class="rvts11">Organizations are shared accounts where businesses and open-source projects can collaborate across many projects at once. Owners and administrators can manage member access to the organization's data and projects with sophisticated security and administrative features.</span></span></h4>
+<h4 class="rvps20"><span class="rvts0"><span class="rvts53">You can use organizations that separate your user from your project, while still giving you contorl</span></span></h4>
+<p class="rvps21"><span class="rvts11"><br/></span></p>
+<h2 class="rvps18"><span class="rvts0"><span class="rvts45">The “Git” in GitHub</span></span></h2>
+<p class="rvps19"><span class="rvts46">To understand GitHub, you must first have an understanding of Git. Git is an open-source version control system that was started by Linus Trovalds – the same person who created Linux. Git is similar to other version control systems –&nbsp;</span><a class="rvts47" href="https://www.howtogeek.com/66731/version-tracking-with-subversion-svn-for-beginners/">Subversion</a><span class="rvts46">, CVS, and Mercurial to name a few.</span></p>
+<p class="rvps19"><span class="rvts48">Version control systems</span></p>
+<p class="rvps19"><span class="rvts46">So, Git is a “version control system,” what’s that mean? When developers are creating something (an application, for example), they are making constant changes to the code and releasing new versions, up to and after the first official (non-beta) release.</span></p>
+<p class="rvps19"><span class="rvts46">Version control systems keep these revisions straight, and store the modifications in a central repository. This allows developers to easily collaborate, as they can download a new version of the software, make changes, and upload the newest revision. Every developer can see these new changes, download them, and contribute.</span></p>
+<p class="rvps19"><span class="rvts46">Similarly, people who have nothing to do with the development of a project can still download the files and use them. Most Linux users should be familiar with this process, as using Git, Subversion, or some other similar method is pretty common for downloading needed files, especially in preparation for compiling a program from source code (a rather common practice for Linux geeks).</span></p>
+<p class="rvps19"><span class="rvts46">In case you are wondering why Git is the preferred version control system of most developers, it has multiple advantages over the other systems available, including a more efficient way to store file changes and ensuring file integrity. If you’re interested in knowing the details, check out&nbsp;</span><a class="rvts47" href="http://git-scm.com/book/en/Getting-Started-Git-Basics">this page</a><span class="rvts46">&nbsp;to read a thorough explanation on how Git works.</span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

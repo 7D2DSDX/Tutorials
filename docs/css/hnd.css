@@ -291,6 +291,58 @@ span.rvts50
  font-weight: bold;
  color: #404040;
 }
+span.rvts51
+{
+ font-size: 14pt;
+ font-weight: bold;
+ color: #333333;
+}
+a.rvts52, span.rvts52
+{
+ font-size: 11pt;
+ color: #4183c4;
+ text-decoration: none;
+}
+span.rvts53
+{
+ font-size: 11pt;
+ font-style: italic;
+ color: #333333;
+}
+span.rvts54
+{
+ font-family: 'ar';
+ color: #24292e;
+ background-color: #ffffff;
+}
+a.rvts55, span.rvts55
+{
+ font-family: 'ar';
+ color: #24292e;
+ background-color: #ffffff;
+ text-decoration: underline;
+}
+span.rvts56
+{
+ font-family: 'segoe ui';
+ color: #2a2a2a;
+}
+span.rvts57
+{
+ font-size: 14pt;
+ font-family: 'ar';
+ font-style: italic;
+ font-weight: bold;
+ color: #24292e;
+ background-color: #ffffff;
+}
+span.rvts58
+{
+ font-family: 'ar';
+ font-style: italic;
+ color: #24292e;
+ background-color: #ffffff;
+}
 /* ========== Para Styles ========== */
 p,ul,ol /* Paragraph Style */
 {
@@ -417,7 +469,25 @@ p,ul,ol /* Paragraph Style */
  background: #ffffff;
  margin: 7px 0px 24px 0px;
 }
+.rvps20
+{
+ text-align: left;
+ text-indent: 0px;
+ background: #ffffff;
+ padding: 0px 0px 0px 0px;
+ margin: 19px 0px 19px 0px;
+}
+.rvps21
+{
+ background: #ffffff;
+ margin: 15px 0px 15px 0px;
+}
+.rvps22
+{
+ margin: 0px 0px 15px 0px;
+}
 /* ========== Lists ========== */
 .list0 {text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside; list-style-type: disc;}
 .list1 {text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside;}
 .list2 {text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside; list-style-type: square;}
+.list3 {text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside; list-style-type: circle;}

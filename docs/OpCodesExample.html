@@ -1,0 +1,208 @@
+﻿
+
+<html>
+	
+<head>
+	<title>OpCodes Example</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("OpCodesExample");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">OpCodes Example</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="AdvancedTools.html">Advanced Tools</a> &rsaquo;&rsaquo; <a href="dnSpyQuickReview.html">dnSpy Quick Review</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="dnSpyQuickReview.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="TheGetILWindow.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="DealingwithDeobfuscation.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><a class="rvts16" href="https://en.wikipedia.org/wiki/List_of_CIL_instructions">For &nbsp;a full list of OpCodes, click here.</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Here's a sample table that lists the OpCodes and what value is expected in them.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For reference, here's a method that's displaying our OpCodes</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem325.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">And here's the C# Code to go alone with it:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem326.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="125" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">OpCode</span></p>
+</td>
+<td width="140" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Operand Type</span></p>
+</td>
+<td width="1104" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Description</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="125" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">ldarg.0</span></p>
+</td>
+<td width="140" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Blank</span></p>
+</td>
+<td width="1104" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps22"><span class="rvts56">It's the first argument. In nearly all cases, it translates to "this"</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="125" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">ldc.i4.s</span></p>
+</td>
+<td width="140" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">0x20</span></p>
+</td>
+<td width="1104" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This "pushes" a 32-bit int into position. In our example, it's showing 32 rather than 0x20. However, it's displaying the decimal value in the code view (32), whereas the IL is hex: 0x20</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="125" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">call</span></p>
+</td>
+<td width="140" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Method call</span></p>
+</td>
+<td width="1104" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This 'calls' another method', passing in the operand that was pushed above it. In this case, it's calling Bag::RU( 0x20 ), or &nbsp; Bag::RU( ldc.i4.s)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="125" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">ldarg.0 </span></p>
+</td>
+<td width="140" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Blank</span></p>
+</td>
+<td width="1104" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Same as above, it calls "This"</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="125" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">ldarg.1</span></p>
+</td>
+<td width="140" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">blank</span></p>
+</td>
+<td width="1104" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This the "second" parameter passed to the method. However, it's second to "this", which is passed by default. ldarg.1, in this example, refers to "_slots"</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="125" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">stfld</span></p>
+</td>
+<td width="140" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">ItemStack[] Bag::UU</span></p>
+</td>
+<td width="1104" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Updates the value in the Operand with the previous instruction. In this case, this.UU is being updated by the _slots value.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="125" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">ldarg.0</span></p>
+</td>
+<td width="140" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Blank</span></p>
+</td>
+<td width="1104" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Again "this"</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="125" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">call</span></p>
+</td>
+<td width="140" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Method Call</span></p>
+</td>
+<td width="1104" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Calling another method, in this case: &nbsp;instance void Bag::EU()</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="125" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">ret</span></p>
+</td>
+<td width="140" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Blank</span></p>
+</td>
+<td width="1104" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">returns. This is a "void" method, so there's nothing to return.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
