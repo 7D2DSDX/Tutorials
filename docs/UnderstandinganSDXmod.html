@@ -1,0 +1,275 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Understanding an SDX mod</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("UnderstandinganSDXmod");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Understanding an SDX mod</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="GettingStarted.html">Getting Started</a> &rsaquo;&rsaquo; <a href="SDXLauncher.html">SDX Launcher</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SDXLauncher.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="TheModsOutputtab.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="SDXBeginnerTutorial.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">Start the SDX Launcher</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem171.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Click on the "Mods Folder". This will open up the Explorer Window where the mods are installed.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/NewItem173.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Double click on the "KatanaSample" Folder, and look at the contents of the folder</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem198.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Config folder contains an XML file, that includes all the XML snippets and new items, blocks, and other items you want merged into SDX.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Resources folder contains the Unity3D bundles, which are the new items and blocks.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">mod.xml is a basic XML configuration file for SDX.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts13">mod.xml:</span></span></h2>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The mod.xml gives information for the SDX Launcher, to show up in the tool.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts21">&lt;mod&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;info&gt;</span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;author&gt;sphereii&lt;/author&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;name&gt;Sample&lt;/name&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;description&gt;Sample Basic SDX Mod&lt;/description&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;mod_version&gt;1.0&lt;/mod_version&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;game_version&gt;16.2&lt;/game_version&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;launcher_version&gt;0.0.0&lt;/launcher_version&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;/info&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- This references any config files that SDX needs to merge into your files --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;config_mods&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;import file="Config\Sample.xml" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"> &nbsp; &nbsp;&lt;/config_mods&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts21">&lt;/mod&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts23">Author</span><span class="rvts6">: The name of the author who created this mod, shows up in the SDX Launcher</span></p>
+<p class="rvps2"><span class="rvts23">Name</span><span class="rvts6">: The name of the mod, shows up in the SDX Launcher</span></p>
+<p class="rvps2"><span class="rvts23">Description</span><span class="rvts6">: Short description on what the mod does; Shows up in the launcher</span></p>
+<p class="rvps2"><span class="rvts23">Mod version</span><span class="rvts6">: Which version of the mod it is, determined by the author</span></p>
+<p class="rvps2"><span class="rvts23">game_version</span><span class="rvts6">: Which Game version the mod was designed for.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The &lt;config_mods&gt; points to where your mods' XML files are stored.</span></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts13">"Config" Folder: &nbsp;</span></span></h2>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Note: The use of the Config folder is optional. You can run your SDX Mod through the SDX7D2D without it merging any XML files. You can then edit your XML files manually as you normally would.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Double click on the "Config" folder, and open up the KatanaSample.xml in Notepad++. This XML adds a katana bundle using a unity3d bundle for its mesh.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="802" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts21">&lt;configs&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- &nbsp;This tells SDX to add to the Items.xml --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;config name="items"&gt;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- This tells SDX to add the following Items to the bottom of the Items list --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;append xpath="/items"&gt;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- New item will be Katana --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;item id="" name="katanamichonne"&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- Extend it from the machete, but add the custom mesh --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="Extends" value="machete"/&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="Meshfile" value="#michonnekatana?katana" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;/item&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;/append&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts21">&lt;/configs&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">SDX will read this XML file, and add its contents to the right XML of the game. At the bottom of the file, it shows where it's adding the recipe on how to make a Katana using your new items.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">All of the &lt;config&gt; tags need to be in between the root node, which is the &lt;configs&gt; tags.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="407" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Sample Items Code</span></p>
+</td>
+<td width="939" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Description</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="407" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;config name="items"&gt;</span></p>
+</td>
+<td width="939" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells SDX that everything in between the &lt;config&gt; tags will be included in the Items.xml file</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="407" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;append xpath="/items"&gt;</span></p>
+</td>
+<td width="939" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells SDX that everything in between the &lt;Append&gt; path will be included inside of the &lt;items&gt; tag of items.xml</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="407" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;item id="" name="katanamichonne"&gt;</span></p>
+</td>
+<td width="939" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells SDX the name of the new item to add. Notice there is no ID? SDX will auto-assign it an ID at build time.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="407" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;property name="Meshfile" value="</span><span class="rvts21">#michonnekatana?katana</span><span class="rvts6">" /&gt;</span></p>
+</td>
+<td width="939" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This will tell SDX, at run time, what the meshfile is called.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="407" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;/append&gt;</span></p>
+</td>
+<td width="939" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Closes the append tag</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="407" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">&lt;/config&gt;</span></p>
+</td>
+<td width="939" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Closes the Items tag</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Notice that there is no Item ID specified? When an Item ID, or block ID is not specified, SDX, at build time, will auto-assign an ID. Therefore, all your items and blocks will be auto-numbered.</span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts22">Resources:</span></span></h1>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Resources folder contains all your Unity 3D models and textures, stored as Unity Bundle 3D files.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem195.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts22">Text:</span></span></h1>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Text folder is optional, but contains the localization files. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem197.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Example:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Key,Source,Context,Changes,English,French,German,Klingon,Spanish</span></p>
+<p class="rvps2"><span class="rvts6">katanamichonne,items,Melee,KgNone,Michionne's katana,,,,</span></p>
+<p class="rvps2"><span class="rvts6">katanamichonneDesc,items,Melee,New,Michionne's katana is ready to slice and dice up the zombies,,,,</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts22">PatchScript:</span></span></h1>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Some SDX Mods, like the Bigger Back Pack Mod, contains a PatchScript folder. A PatchScript is a C# script that is compiled at SDX Build time, and allows injection into the Assembly-CSharp. The SDX Launcher reads any files in this folder, and tries to compile it.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem200.png"></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
