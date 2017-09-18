@@ -1,0 +1,36 @@
+        // For the Tool Tip displaying of some of the search items, we need to clear out an obsfucated method, so we'll need to search for it.
+        //myClass = module.Types.First(d => d.Name == "EntityPlayerLocal");
+        //var classMethods = myClass.Methods;
+        
+        //// For each of these methods, we want to loop around, looking at the instructions for a method call
+        //// that's inside of them.
+        //foreach (var method in classMethods)
+        //{
+        //    // Look up all the method's instructions, and search for the opcode and operand that matches the text.
+        //    var body = method.Body.Instructions
+        //            .Where(instruction => instruction.OpCode == OpCodes.Ldfld)
+        //            .Select(instruction => (FieldReference)instruction.Operand)
+        //            .Where(fieldReference => fieldReference.FullName.Contains("strTextLabelPointingTo"));
+
+        //    // no instructions found, so just continue the loop.
+        //    if (body.Count() == 0)
+        //        continue;
+
+        //    CleanMethod(method);
+           
+        //}
+		
+		
+		        // We want to remove the GetActivation message, for when you are looking at a forge or camp fire, and want to remove it.
+        //Log("Removing GetActivationText on Block Classes");
+
+        //// We are searching for two things: That the class name starts with Block, and that it contains a method called GetActivationText
+        //var myClasses = module.Types.Where(d => d.Name.StartsWith("Block"))
+        //                            .Where(d => d.Methods.Any(e => e.Name.Contains("GetActivationText")));
+
+        //// Since there are many different classes that have the GetActivationText, we need to search through all the classes to find the references
+        //foreach (var mySearchedClass in myClasses)
+        //{
+        //    myMethod = mySearchedClass.Methods.First(m => m.Name == "GetActivationText");
+        //    CleanMethod(myMethod);        
+        //}
