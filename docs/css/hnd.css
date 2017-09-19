@@ -343,6 +343,31 @@ span.rvts58
  color: #24292e;
  background-color: #ffffff;
 }
+span.rvts59
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ background-color: #ffff00;
+}
+span.rvts60
+{
+ background-color: #ffffff;
+}
+span.rvts61
+{
+ font-style: italic;
+ font-weight: bold;
+}
+span.rvts62
+{
+ font-weight: bold;
+ text-decoration: underline;
+}
+span.rvts63
+{
+ font-size: 16pt;
+ font-style: italic;
+ font-weight: bold;
+}
 /* ========== Para Styles ========== */
 p,ul,ol /* Paragraph Style */
 {
@@ -486,8 +511,20 @@ p,ul,ol /* Paragraph Style */
 {
  margin: 0px 0px 15px 0px;
 }
+.rvps23
+{
+ text-align: center;
+ text-indent: 0px;
+ page-break-after: avoid;
+ padding: 0px 0px 0px 0px;
+ margin: 16px 0px 4px 0px;
+}
 /* ========== Lists ========== */
 .list0 {text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside; list-style-type: disc;}
 .list1 {text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside;}
 .list2 {text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside; list-style-type: square;}
 .list3 {text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside; list-style-type: circle;}
+.list4 {text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;}
+.list5 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;}
+.list6 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;}
+.list7 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;}

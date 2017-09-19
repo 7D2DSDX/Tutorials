@@ -1,0 +1,169 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Linking your SDX Mods into Visual Studio</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("LinkingyourSDXModsintoVisualStud");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Linking your SDX Mods into Visual Studio</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HowTos.html">How Tos</a> &rsaquo;&rsaquo; <a href="HowtosetupVisualStudioforSDXModD.html">How to set up Visual Studio for SDX Mod Development</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="HowtosetupVisualStudioforSDXModD.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="CreatingNewVisualStudioProject.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="AddinginAssemblyReferences.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts13">Linking SDX Mods into Visual Studio</span></span></h2>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In the Solution Explorer, click on SDXMod</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem417.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In the Properties screen, you'll see the Project Folder. Copy and Paste that into your Clip board.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Open up a Windows Command Prompt (as Administrator):</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem418.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The command we are going to run is the mklink command. This will create a Windows Symlink from your SDX Folder to your Visual Studio Project.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem419.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">We want to make a link between your Visual Studio project, and the SDX Folder.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The syntax is:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">mklink /D "Your Project Folder" "YourSDX Mods Folder"</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem421.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Example:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts21">mklink /D </span><span class="rvts59">"c:\users\jkilpatrick\documents\visual studio 2017\Projects\SDXMod\SDXMod\Mods"</span><span class="rvts21"> </span><span class="rvts59">C:\SDXModding\SDX0.7.1\Targets\7DaysToDie\Mods</span></p>
+<p class="rvps2"><span class="rvts59"><br/></span></p>
+<p class="rvps2"><span class="rvts60">The first part of the command points to your Visual Studio Project, and to a non-existent "Mods" folder. </span></p>
+<p class="rvps2"><span class="rvts60"><br/></span></p>
+<p class="rvps2"><span class="rvts60">The second part of the command points to where your SDX Target Files are.</span></p>
+<p class="rvps2"><span class="rvts60"><br/></span></p>
+<p class="rvps2"><span class="rvts60"><br/></span></p>
+<p class="rvps2"><span class="rvts60">Back in your Visual Studio Project, go to your Solution Explorer, and look for "Show All Files"</span></p>
+<p class="rvps2"><span class="rvts60"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem422.png"></p>
+<p class="rvps2"><span class="rvts60"><br/></span></p>
+<p class="rvps2"><span class="rvts60">After you click on Show All Files, you'll see some faded folders:</span></p>
+<p class="rvps2"><span class="rvts60"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem423.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Right click on the Mods folder, and choose Include In Project:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem429.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts60"><br/></span></p>
+<p class="rvps2"><span class="rvts60">Click on the Mods folder, and drill down through your Mod files.</span></p>
+<p class="rvps2"><span class="rvts60"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem424.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

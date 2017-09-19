@@ -1,0 +1,158 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Error Checking Localization</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ErrorCheckingLocalization1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Error Checking Localization</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HowTos.html">How Tos</a> &rsaquo;&rsaquo; <a href="Howtousethe7D2DSDXModHelper.html">How to use the 7D2D SDX Mod Helper</a> &rsaquo;&rsaquo; <a href="AddinganSDXmodtoaWaroftheWalkers.html">Adding an SDX mod to a War of the Walkers Install</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="AddinganSDXmodtoaWaroftheWalkers.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="UpdatingtheSDXPath1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="DownloadingSDXMods1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">Because we are using a mod (War of the Walkers) for this part of the tutorial, you will want to run the Error Check Localization.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem383.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps6"><span class="rvts0"><span class="rvts13">If you have any errors in the localization files, SDX will fail.</span></span></h2>
+<p class="rvps3"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Click on the Error Check Localization file to open the Scan Localization Files screen.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem398.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Verify that the Game Directory is set correctly. If not, go back to the SDX Mod Helper main screen and change it there.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Click on the Attempt Fixes button.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem399.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">It found a duplicate in the Localization - Quest.txt and removed it. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">It did find some malformed entries in the Localization.txt file. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">"Localization.txt Line 4905 has 11 columns when we expected 9"</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This is one of the offending lines:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts21">TungstenFragmentDesc,items,Item,KgNone,A advanced metal that can be used in the forge to make Tungsten Items,Un métal avancé qui peut être utilisé dans la forge pour faire des objets de tungstène,Ein vorgerücktes Metall, das in der Schmiede verwendet werden kann, um Wolfram-Einzelteile herzustellen,,Un metal avanzado que se puede utilizar en la fragua para hacer artículos de tungsteno</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">When we look closely at the file, we see this:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts21">TungstenFragmentDesc,items,Item,KgNone,A advanced metal that can be used in the forge to make Tungsten Items,Un métal avancé qui peut être utilisé dans la forge pour faire des objets de tungstène,</span><span class="rvts59">Ein vorgerücktes Metall, das in der Schmiede verwendet werden kann, um Wolfram-Einzelteile herzustellen</span><span class="rvts21">,,Un metal avanzado que se puede utilizar en la fragua para hacer artículos de tungsteno</span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In this case, it's the German translation for TungstenFragment. Notice the commas with the space after it? This indicates that it should be wrapped around in quotes, as the commas are actually part of the sentence structure.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">You will need to fix each of those individually.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The other localization error it picked up says this:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">"Localilzation.txt Line: 4960 has 8 columns when we expected 9"</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">That means there is probably a missing comma. The SDX Mod Helper has padded this line with an extra comma (or more, depending on the number of missing commas).</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">After you have fixed the Localization file, re-run the Scan Localization Files.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem401.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
