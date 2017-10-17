@@ -1,0 +1,182 @@
+﻿
+
+<html>
+	
+<head>
+	<title>AnimationSDX Class</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.3.2.378">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("AnimationSDXClass");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">AnimationSDX Class</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="TheAnimationSDXmod.html">The Animation SDX mod</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="TheAnimationSDXmod.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="TheAnimationSDXmod.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="SDXXPathConfigurations.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">The Animation SDX mod relies on a new class called "</span><span class="rvts39">AnimationSDX</span><span class="rvts6">". It exposes Unity calls that allow us to add in assets with custom animations, which we can control through the XML files.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Originally, there was separate classes for animals vs BipedAnimations, however, there's little need for the BipedAnimations class anymore, so we are funneling everything through the AnimalAnimationSDX.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Using the Animation SDX class, with a new custom Unity asset, we can make calls directly to the embedded animation in the unity3d file.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For example, in the </span><a class="rvts16" href="HowtosetuptheanimatedRedSamuraiA.html">Red Samurai How To</a><span class="rvts6">, we had a few existing animations:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem530.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">By using the animation names in the Elements, we can populate the following new properties in the XML.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp; &lt;!--</span><span class="rvts38"> These are the animation map names. The value comes from the animation from Unity </span><span class="rvts35">--&gt;</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="rvts36">property</span><span class="rvts35"> </span><span class="rvts37">name</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">AnimationIdle</span><span class="rvts34">"</span><span class="rvts35"> </span><span class="rvts37">value</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">Idle</span><span class="rvts34">"</span><span class="rvts35"> /&gt;</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="rvts36">property</span><span class="rvts35"> </span><span class="rvts37">name</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">AnimationSecondIdle</span><span class="rvts34">"</span><span class="rvts35"> </span><span class="rvts37">value</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">Idle2</span><span class="rvts34">"</span><span class="rvts35"> /&gt;</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="rvts36">property</span><span class="rvts35"> </span><span class="rvts37">name</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">AnimationMainAttack</span><span class="rvts34">"</span><span class="rvts35"> </span><span class="rvts37">value</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">Attack(2)</span><span class="rvts34">"</span><span class="rvts35"> /&gt;</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="rvts36">property</span><span class="rvts35"> </span><span class="rvts37">name</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">AnimationSecondAttack</span><span class="rvts34">"</span><span class="rvts35"> </span><span class="rvts37">value</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">Attack(3)</span><span class="rvts34">"</span><span class="rvts35"> /&gt;</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="rvts36">property</span><span class="rvts35"> </span><span class="rvts37">name</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">AnimationPain</span><span class="rvts34">"</span><span class="rvts35"> </span><span class="rvts37">value</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">Get_Hit</span><span class="rvts34">"</span><span class="rvts35"> /&gt;</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="rvts36">property</span><span class="rvts35"> </span><span class="rvts37">name</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">AnimationJump</span><span class="rvts34">"</span><span class="rvts35"> </span><span class="rvts37">value</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">Jump</span><span class="rvts34">"</span><span class="rvts35"> /&gt;</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="rvts36">property</span><span class="rvts35"> </span><span class="rvts37">name</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">AnimationDeath</span><span class="rvts34">"</span><span class="rvts35"> </span><span class="rvts37">value</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">Dead</span><span class="rvts34">"</span><span class="rvts35"> /&gt;</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="rvts36">property</span><span class="rvts35"> </span><span class="rvts37">name</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">AnimationRun</span><span class="rvts34">"</span><span class="rvts35"> </span><span class="rvts37">value</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">Run</span><span class="rvts34">"</span><span class="rvts35"> /&gt;</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="rvts36">property</span><span class="rvts35"> </span><span class="rvts37">name</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">AnimationWalk</span><span class="rvts34">"</span><span class="rvts35"> </span><span class="rvts37">value</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">Walk</span><span class="rvts34">"</span><span class="rvts35"> /&gt;</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="rvts36">property</span><span class="rvts35"> </span><span class="rvts37">name</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">AnimationSpecialAttack</span><span class="rvts34">"</span><span class="rvts35"> </span><span class="rvts37">value</span><span class="rvts35">=</span><span class="rvts34">"</span><span class="rvts35">Attack(4)</span><span class="rvts34">"</span><span class="rvts35"> /&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The above properties are what is currently supported by the Animation class. Some are optional, such as AnimationSpecialAttack, AnimationSecondAttack, etc. However, it's best to try to populate them as best as you can for a full experience.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">When compiled, a new entity_class is added to the entityclasses.xml called "SDXTemplate". All new entities that want to use this class should inherit from this, or copy it's attributes</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;entity_class name="SDXTemplate" extends="zombieTemplateMale"&gt;</span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- For fun, let's use the zombie transmogrifier class --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="Class" value="EntityZombieSDX, Mods" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- We are using the Animal Animation, since the BipedAnimation is a bit wonky with the hit animation --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="AvatarController" value="AnimationSDX, Mods" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- With RootMotion true, the zombie just kind of chills out in one place. Set to false to watch it move. --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="RootMotion" value="false" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;!-- Baseline Speed is way too slow, so we need to bump it up a notch or 5 --&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="WanderSpeed" value="0.8" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="ApproachSpeed" value="0.8" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="NightWanderSpeed" value="0.8" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="NightApproachSpeed" value="1.1" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;property name="HasRagdoll" value="false" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;/entity_class&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This changes the Class to use the ZombieTransmogrifier mod. However, you can change this back to the regular zombie class.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The AvatarController is already pointing to the AnimationSDX class.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">RootMotion is disabled, as it causes the new entities to not move around if its enabled.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">We bump up the default speeds, as there are internal modifiers that affect the zombie speeds that are not available to the new AvatarController.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com">Free Qt Help documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

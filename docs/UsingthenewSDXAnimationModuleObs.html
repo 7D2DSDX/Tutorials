@@ -1,0 +1,150 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Using the new SDX Animation Module (Obsolete)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.3.2.378">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("UsingthenewSDXAnimationModuleObs");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Using the new SDX Animation Module (Obsolete)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HowTos.html">How Tos</a> &rsaquo;&rsaquo; <a href="HowtosetuptheanimatedRedSamuraiA.html">How to set up the animated Red Samurai Asset</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="HowtosetuptheanimatedRedSamuraiA.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="BuildingtheSDXMod.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="DownloadingandImportingtheDummy1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">The SDX Animation Module allows you to add in your own unique creatures and characters into the world, without relying on in-game animation calls.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This tutorial will guide you on downloading an asset from the Unity store, and converting it into an in-game creature. Some of the steps we will be doing will be similar to adding in a block, but there's some big differences as well.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The following Tutorials are highly recommend to be done before doing this:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a class="rvts16" href="Unity538p2QuickReview.html">Unity 5.3.8p2 Quick Review</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a class="rvts16" href="VideoTutorials.html">Video Tutorials - Xyth's second tutorial on adding assets to unity</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts13">Note: Animations are completely separate from the base game. The animations are part of the unity asset. This means that we cannot hook it into the game's rag doll physics, nor will you be able to add dismemberment to your creations.</span></span></h2>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">But we can still have fun with it :)</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">There are a lot of assets on the Unity store that will look great in game, while others may be fine for your unique vision of the game. Here's a few things to look for.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Typically, any 3D Model will work with this SDX Animation Module. For a full easy experience, you'll want to look for assets with added animations, such as:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem457.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Note, in the description, it says there's "10 clips of animations, and lists them. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Depending on your end goals, you'll want to have animations that can be used for the following tasks:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Attack</span></p>
+<p class="rvps5"><span class="rvts6">Die</span></p>
+<p class="rvps5"><span class="rvts6">Jump</span></p>
+<p class="rvps5"><span class="rvts6">Run</span></p>
+<p class="rvps5"><span class="rvts6">Walk</span></p>
+<p class="rvps5"><span class="rvts6">Idle</span></p>
+<p class="rvps5"><span class="rvts6">Pain</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">With the SDX Animation module, you can have 2 different attacks, in addition to a special attack that gets randomly called. Idle can also have two separate animations that get called. These extras are optional, as is most of the animations types listed above. However, to make them feel part of the world, you'll want those basics covered. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you are comfortable with Unity and animations, you can add in your own custom animations. For this tutorial, however, we are going to be looking for assets that already come with animations.</span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com">Free EPub and documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
