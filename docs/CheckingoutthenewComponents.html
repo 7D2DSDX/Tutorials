@@ -5,7 +5,7 @@
 <head>
 	<title>Checking out the new Components</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="generator" content="HelpNDoc Personal Edition 5.3.2.378">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
 	<meta name="keywords" content="">
 	
 	
@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="HowTos.html">How Tos</a> &rsaquo;&rsaquo; <a href="HowtosetuptheanimatedRedSamuraiA.html">How to set up the animated Red Samurai Asset</a> &rsaquo;&rsaquo; 
+					<a href="HowTos.html">How Tos</a> &rsaquo;&rsaquo; <a href="Howtosetuptheanimatedcustomentit.html">How to set up the animated custom entity</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -70,11 +70,11 @@
 			<div id="topic_header_nav">
 				
 				
-				<a href="HowtosetuptheanimatedRedSamuraiA.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				<a href="Howtosetuptheanimatedcustomentit.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
 				
 				
-				<a href="AddingtheRedSamuraiPrefab.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="AddingtheEntityPrefab.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
@@ -92,30 +92,27 @@
 <p></p>
 <p class="rvps2"><span class="rvts6">In previous tutorials, we had to deal with the Transform Position (so the block sits right in the world), and the box collider. </span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">An animated character has more Components in order for everything to work well. We'll review them here.</span></p>
+<p class="rvps2"><span class="rvts6">An animated character has more Components in order for everything to work well. We'll review them here. Each model you work with will have different names, and ordering to them as they appear in the hierarchy.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">With the goblin_rouge_b prefab selected, we'll look at the Inspector</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem540.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">With the samuzai prefab selected, we'll look at the Inspector</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem509.png"></p>
+<p class="rvps2"><span class="rvts6">We have our Transform, as always, but we also have some new components called Animator, Character Controller, and a Script. We don't need a Character Controller, or a Script component to add the game, and they may even give us errors. Click on the Gear Cog by each component, and Remove Component.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">We have our Transform, as always, but we also have a new component called Animation.</span></p>
+<p class="rvps2"><span class="rvts6">Under the Hierarchy, click on the second part of the prefab, the "gbln_war_eq.002", and look at the Inspector.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">For the Samuzai, we also have an Animation Component already added. Here, we have the default animation ("attack"), as well as all the other available animations. The Size refers to how many animations there are available. By default, it says 5, although there's only 4 available animations.</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">At the end of the Element 4 line, which says "Missing ( Animation Clip )", click on the circle to pick an animation. Select the Idle animation</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem525.png"></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem541.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Under the Hierarchy, click on the second part of the prefab, the "Plane007", and look at the Inspector.</span></p>
+<p class="rvps2"><span class="rvts6">On this object, you can see in the Scene window that its swords, jacket, and hair are all highlighted. This tells us that that this layer just involves those items. We have our transform, and our Skinned Mesh Renderer. The Mesh Rendered is what applies the mesh for the highlighted objects. </span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps13"><img width="1332" height="721" alt="" style="padding : 1px;" src="lib/NewItem510.png"></p>
+<p class="rvps2"><span class="rvts6">In the Hierarchy, click on the Goblin_armature. If you expand the selection, you'll see there's just 'empty' game objects. &nbsp;These are the Goblin's joints and body parts. We typically don't need to make any changes to them.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">We have a </span><a class="rvts16" href="https://docs.unity3d.com/Manual/class-SkinnedMeshRenderer.html">Skinned Mesh Renderer</a><span class="rvts6">, and a Shader. The Skinned Mesh Renderer is required for animation sequences, allowing the mesh to bend with the movements.</span></p>
+<p class="rvps2"><span class="rvts6">Back in the Hierarchy, click on the GOBLIN_BASE. You'll notice it has a Skinned Mesh Rendered, and it covers up nearly every aspect of the Goblin. It doesn't inclulde his hair, or his weapons, but that's fine. Since this game object is the one that covers the object the most, it's where we'll want to place our Mesh Collider later.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">It also has a Shader option, which for most models is set for Standard. For older unity assets ( pre Unity 5.x ), the Shader may need to be adjusted. However, that appears to be rare.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p></p>
 <p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
