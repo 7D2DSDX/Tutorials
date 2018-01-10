@@ -1,0 +1,176 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Looking at the Butcher's Animator Controller</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.3.2.378">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("LookingattheButchersAnimatorCont");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Looking at the Butcher's Animator Controller</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HowtocreateanAnimatorStateMachin.html">How to create an Animator State Machine</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="HowtocreateanAnimatorStateMachin.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="InitialTutorialSetup.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="CreatingAnewAnimatorController.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">Under TheButcher, look under TheButcher/Prefabs, and drag the TheButcher prefab up into your Hierachy screen. This will be our template avatar.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem568.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Notice The Butcher already has a Animator Controller? Let's take a look at his Animator Controller to give a hint on what we'll be creating. If you have a Game tab, click and drag it off of the main Unity screen, so that it's separate window. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem569.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In the new window, you'll see The Butcher, but he'll have his back to you. To turn him around, go to the main Unity Window, click on the Butcher in the Hierarchy. This will open up his Inspector window. Change the Y rotation to 220.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem570.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Now click on the Play button, in the Unity main screen. He'll swing his butcher knife once, then stop. Let's see why.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In the Unity main screen, click on the Animator. If you do not have an Animator tab, go to Window, and select Animator.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem572.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In the Animator, you can see some colourful boxes. These are States, and the lines between them are Transitions. The transitions allow us to flow from one state to another, based on the conditions on the Transitions. The states themselves can be animation clips, Entry / Any State / Exit states, Empty states or Group States. We'll cover these more in depth later.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If the Play button is still blue, press it again to turn it off, then turn it back on. You'll see Default briefly flash, then the Attack state lights up with a progress bar, as it goes through the animation, as viewable through the Game screen.You'll also notice, briefly, that the Transition Line from Default lights up and can see &nbsp;it going up into Attack, then, once the Attack animation is complete, it goes back down the other Transition line.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Above the Base Layer, you'll see a Layers and Parameters tab. &nbsp;Layers allow you to have complex animations in which two or more parts of the entity can be animated differently. Parameters is what triggers our events. Let's click on the Parameters tab, and see what the Butcher has by default.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem573.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Under Parameters, we see Attack. With the Play button still blue, click on the circle beside the Attack. You'll see the blue Transition dot go up the Transition line, display the Attack Animation, then flow back down to the Default again.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Let's see what's really happening here.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Click on the "Default State", and it will bring up the Inspector window.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem574.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Inspect window shows the name, and other information about that state. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">"Default" is the name of the current state. You can rename any States that you want by clicking on the name in the Inspector window.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">We'll rarely change anything on the State itself, so this information is provided purely for informational value:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem575.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Let's click on the Transition line going from Default, to Attack, and bring up it's Inspector window.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem577.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Under Transitions, it shows you all the transitions you have. The Solo and Mute are only used for testing and isolated small parts of a complicated state machine, and are not used for production.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Click on the arrow beside the Settings label, and expand all the settings.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem578.png"></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Under the Conditions settings, you see "Attack". This is where you can add and remove your parameters you've set. The Attack matches the Parameter, so when we click on the Attack circle, it fires off the state transition automatically for us. The other options in this screen are as follows:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem579.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

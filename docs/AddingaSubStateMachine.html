@@ -1,0 +1,163 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Adding a Sub-State Machine</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.3.2.378">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("AddingaSubStateMachine");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Adding a Sub-State Machine</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HowtocreateanAnimatorStateMachin.html">How to create an Animator State Machine</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="HowtocreateanAnimatorStateMachin.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="AddingaVarietyofAnimationsforasi.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="AddingaDeathAnimation.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">In our previous exercise, we added 5 new Attack Animators, using a combination of Attack Trigger Parameter, and the AttackIndex Integer Parameter.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">As you can see, the Animator Window is getting a bit cluttered. To Clean it up a bit, we can create a Sub-State Machine to group them together. A Sub-State machine does not change any of the Transitions or States,but rather just cleans up the UI.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In the Animator window, right click on the empty background, and choose Create Sub-State Machine.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem604.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">A "New StateMachine" state appears:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem605.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">However, it's a different shape; it's a hexgon, rather than box. That's an indicator that it's a Sub-State machine, and may contain more states. Click on it once to open up it's Inspector window, and change the name. We'll call it the AttackGroup.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem606.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Multi-select your Attack States, and drag them over the AttackGroup. You'll notice your mouse cursor will have a little + added to it when it's over the Sub-State machine.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem607.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Attack Sates will disappear, the links from Any State have disappeared, and a new Transition line, with three arrows, point from the AttackGroup Sub-State Machine, to Idle_A.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Transition line with 3 arrows indicates that there's multiple Transition states coming out of the AttackGroup. Click on the Transition line to bring up the Inspector Window.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem608.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Under the Transitions, we see there's multiple transitions now. It shows which State goes to which State. All our links are still intact to the Idle_A, along with any of the conditions we have set on them. Our link from the Any State has disappeared as well. However, a Sub-State Machine itself has an Any State, so there's no need to visualize the link here.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Double click on the AttackGroup to access the States within it. Initially, it'll be a bit of a mess. However, you can re-arrange the states to make them easier to see and read.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem609.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Sub-State Machine has an Entry, Any State, and an Exit, like the top level State Machine. However, it has a new State: ( Up) Base Layer. This is the link outside of the Sub-State Machine, and it's what connects our AttackGroup to our Idle_6.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts22">Making Links Outside of the Sub-State Machine</span></span></h1>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you need to add a new Attack Animation to the sub-state, and need to Transition back to the main Idle_6, drag your Transition to the (Up) Base Layer. A small pop up will show you the available States to connect too.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem610.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts22">Making Links Inside of the Sub-State Machine</span></span></h1>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Likewise, if you need to make a transition from the main State Machine, into a Sub-State machine, make a Transition to the AttackGroup state machine, and a similar pop up appears.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem612.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Create iPhone web-based documentation</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,177 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Adding Parameters to the Animator Controller</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.3.2.378">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("AddingParameterstotheAnimatorCon");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Adding Parameters to the Animator Controller</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HowtocreateanAnimatorStateMachin.html">How to create an Animator State Machine</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="HowtocreateanAnimatorStateMachin.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="AddingAnimationClipstotheAnimato.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="AddingaMovementState.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts22">Adding A Parameter (or Event)</span></span></h1>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Butcher will get exhausted if we continue to let him punch forever. Let's add a parameter, so that we have more control over when he punches. If the Play button is pressed and the animation is running, please click it again to stop it.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In the Parameters tab, you'll see an entry that says "List is Empty". Click on the plus button.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem584.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">We have four options: Float, Int (Integer), Bool, or Trigger.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem615.png"></p>
+<p class="rvps2"><span class="rvts6">Float and Int allows us to enter a numeric value. This type of parameter would be good for a speed, index, multiplier, or any other where a value would make sense. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">A Bool is either true or false, until something changes it, while a Trigger allows a named value to enable / disabled, in a single fire.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For starting off, select the Bool Parameter, and give it the name "Attack".</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem585.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">On the Transition line from Idle_A to bp_upper_left_A, click on it to bring up its Inspector window. Under Conditions, click on the Plus. A new Condition is added, and since we only have one Parameter, it sets it to that. The value is by default.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem586.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Press the Play button. You'll notice that the Butcher is idling in the Game window. In the Animator window, click on the Attack. Because the parameter is type "Bool", it stays either true or false until we change it. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Since our transition between Idle_A to bp_upper_left_A relied on the condition of Attack to be True, the Animator State finishes the Idle_A animation, then moves up the Transition line to bp_upper_left_A. We don't have a condition on the return Transition, so once the bp_upper_left_A animation finishes, it goes back to Idle_A.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Bool Parameter Attack is either true or false, and won't change unless we make it change to false. Click on the Attack trigger again unchecks it, which changes the condition of the Transition. Once the animations are all complete, it will settle back to the idle_A animation and continue to cycle. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For an Attack animation, the bool doesn't make a lot of sense. If we were to use a bool, we'd be responsible for turning it on and off. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Rather than using a Bool, let's try a Trigger Parameter. Stop the animation by click on the Play button again, and click on the Attack Parameter. Right click on it, and click on Delete.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Press the Plus button again, and set a Trigger type Parameter, naming it "Attack". </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem587.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Attack parameter now has a round circle, rather than a checkbox.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Click on the Transition line from Idle_A to bp_upper_left_A, and adjust the Condition. Since we named it the same as our our Condition, it automatically took effect. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If it did not, click on the two lines in front of the Parameter name to highlight the line, and press the Minus button.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem588.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Then re-add the Parameter using the Plus sign.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Press the play button again. The Butcher will start in his Idle animation and stay idling. Click on the circle by the Attack Parameter to fire off the event.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem589.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Butcher finishes his Idle animation, then transitions to bp_upper_left_A, then back to Idle. However, since we using a Trigger, it's a one time cycle. The Attack trigger only fires off once, then turns itself off. This is unlike the bool, which stayed either True or False until we changed it. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This is a more natural flow for an attack animation. Fire off, and wait for the next trigger. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">However, it's not ideal yet. The Idle_A animation wants to finish before firing off the transition to the next state. When we are calling a Trigger for Attack, we want the transition to begin immediately. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Click on the Transition line from Idle_A to bp_upper_left_A. Remember that Has Exit Time? This means that before the State can Transition, the Exit Time must pass. The Exit Time is the length of the animation itself. Uncheck the Has Exit Time, and re-play the Animation and fire off the Attack Trigger.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">You'll notice that now when you click on the Attack trigger, the Transition happens immediately, firing off the bp_upper_left_A trigger. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpauthoringsoftware.com">News and information about help authoring tools and software</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

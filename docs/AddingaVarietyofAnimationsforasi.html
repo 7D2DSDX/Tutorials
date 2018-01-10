@@ -1,0 +1,167 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Adding a Variety of Animations for a single Trigger</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.3.2.378">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("AddingaVarietyofAnimationsforasi");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Adding a Variety of Animations for a single Trigger</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HowtocreateanAnimatorStateMachin.html">How to create an Animator State Machine</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="HowtocreateanAnimatorStateMachin.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="AddingaMovementState.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="AddingaSubStateMachine.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">In our previous step, we created a walking and running animation sequence, and we added a punching animation, which transitions off of Idle.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For this next step, we are going to add multiple Attack animations, and allow them to be triggered at any time.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">First off, let's add more Animation Clips to the Animator window. Under the FightingMotionsVolume1/FBX/nomove folder, drag the following animations to the Animator window:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem596.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Separate them out in the Animator window so they can be seen clearly, and move our old bp_upper_left_A to be with the new attack animations.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem597.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Before, we transitioned from Idle_A into bp_upper_left_A. However, that limited us to only triggering a punch during the idle state. Click on the Transition lines from Idle_A to bp_upper_left_A, and delete the Transition lines by pressing the Delete key.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Going forward, we want to be able to Transition our attack animations from any state. So rather than making transitions from every state, we are going to use the special "Any State" node. The Any State is an Animator shortcut that behaves like any other individual States, but acts like a wild card. As such, you cannot do a return transition to the Any State. Instead, we'll want to do a return Transition to our Idle_A. This implies that after we attack, we want to go back to our Idle state.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Re-Arrange your States so you have more room to allow connections between the Any State and attack animation States.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem598.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Make Transition lines from Any State to bk_rh_right_A2. For the Transition Condition, add the Attack Parameter as a condition. Since this is an Attack animation, and we want to be able to interrupt the current animation to fire off the attack, we also want to untick the Has Exit Time.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem599.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Proceed to make a Transition line from Any State, to each of the other attack States, setting the same Condition of Attack. For our return Transition, we want to go directly to the Idle_A state. Re-arrange the states so that it looks clearer, as we did below.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem603.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Play the Animation again. When you click on the Attack Parameter to fire off the event, you'll notice that it only fires the first condition that it meets. In the above example, that bk_rh_right_A2, since it was added first. The other attacks are ignored. So how can we get the other Attack animations to fire?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Stop the Animation, and add a new Int Parameter, and call it AttackIndex.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem601.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Much like we did for the MovementState, and decided that 0 was idle, 1 was for walking, and 2 was for running, we'll give each of our Attacks an index value. Our first attack animation will be AttackIndex 0, the second attack Animation will be 1, etc.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For each Transition line from Any State to the Attack States, add a new Condition on AttackIndex Equals with our numbering system. For example:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">bk_rh_right_A2 will have AttackIndex Equals 0</span></p>
+<p class="rvps2"><span class="rvts6">bp_hook_right_A2 will have AttackIndex Equals 1</span></p>
+<p class="rvps2"><span class="rvts6">hk_rh_right_A2 will have AttackIndex Equals 2</span></p>
+<p class="rvps2"><span class="rvts6">etc</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem602.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Once all the Transitions from Any State to Attack States have a unique AttackIndex, press the Play button again. The Butcher will idle.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In the Parameters section, change the AttackIndex to 2, and click on the Attack Trigger. The State will interrupt the Idle_A animation, transition from Any State to the appropriate Attack Animation, then back to Idle after completing. Since the Attack Trigger only fires once, the Butcher will continue to idle after his attack. Change the AttackIndex to different values, pressing the Attack Trigger after each one.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour">Easily create Web Help sites</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
