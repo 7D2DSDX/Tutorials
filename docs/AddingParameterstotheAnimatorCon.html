@@ -5,7 +5,7 @@
 <head>
 	<title>Adding Parameters to the Animator Controller</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="generator" content="HelpNDoc Personal Edition 5.3.2.378">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
 	<meta name="keywords" content="">
 	
 	
@@ -92,7 +92,11 @@
 <p></p>
 <h1 class="rvps10"><span class="rvts0"><span class="rvts22">Adding A Parameter (or Event)</span></span></h1>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">The Butcher will get exhausted if we continue to let him punch forever. Let's add a parameter, so that we have more control over when he punches. If the Play button is pressed and the animation is running, please click it again to stop it.</span></p>
+<p class="rvps2"><span class="rvts6">The Butcher will get exhausted if we continue to let him punch forever. Let's add a Parameter, so that we have more control over when he punches. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">A Parameter is a setting that allows us to control and fire off conditions, either through the Unity screen, or through the code in the mecanim class. These are our hooks that connect the game's code to the Animator State machine, and allows our entities to be animated and active in-game.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If the Play button is pressed and the animation is running, please click it again to stop it.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">In the Parameters tab, you'll see an entry that says "List is Empty". Click on the plus button.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
@@ -101,16 +105,15 @@
 <p class="rvps2"><span class="rvts6">We have four options: Float, Int (Integer), Bool, or Trigger.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem615.png"></p>
-<p class="rvps2"><span class="rvts6">Float and Int allows us to enter a numeric value. This type of parameter would be good for a speed, index, multiplier, or any other where a value would make sense. </span></p>
+<p class="rvps2"><span class="rvts6">Float and Int allows us to enter a numeric value. This type of parameter would be good for a speed, index, multiplier, or any other where a numeric value would make sense. </span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">A Bool is either true or false, until something changes it, while a Trigger allows a named value to enable / disabled, in a single fire.</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">A Bool is either true or false, until something changes it, while a Trigger allows a named value to enable / disabled, in a single fire, and turns itself off</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">For starting off, select the Bool Parameter, and give it the name "Attack".</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem585.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">On the Transition line from Idle_A to bp_upper_left_A, click on it to bring up its Inspector window. Under Conditions, click on the Plus. A new Condition is added, and since we only have one Parameter, it sets it to that. The value is by default.</span></p>
+<p class="rvps2"><span class="rvts6">On the Transition line from Idle_A to bp_upper_left_A, click on it to bring up its Inspector window. Under Conditions, click on the Plus. A new Condition is added, and since we only have one Parameter, it sets it to that. </span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem586.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
@@ -119,11 +122,13 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Since our transition between Idle_A to bp_upper_left_A relied on the condition of Attack to be True, the Animator State finishes the Idle_A animation, then moves up the Transition line to bp_upper_left_A. We don't have a condition on the return Transition, so once the bp_upper_left_A animation finishes, it goes back to Idle_A.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">The Bool Parameter Attack is either true or false, and won't change unless we make it change to false. Click on the Attack trigger again unchecks it, which changes the condition of the Transition. Once the animations are all complete, it will settle back to the idle_A animation and continue to cycle. </span></p>
+<p class="rvps2"><span class="rvts6">The Bool Parameter Attack is either true or false, and won't change unless we make it change to false. Click on the Attack trigger again unchecks it, which changes the condition of the Transition. Once the animations are all complete, it will settle back to the idle_A animation and no longer transition to the bp_upper_left_A. </span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">For an Attack animation, the bool doesn't make a lot of sense. If we were to use a bool, we'd be responsible for turning it on and off. </span></p>
+<p class="rvps2"><span class="rvts6">For an Attack animation, the bool doesn't make a lot of sense. If we were to use a bool, we'd be responsible for turning it on and off to stop the attack animation.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Rather than using a Bool, let's try a Trigger Parameter. Stop the animation by click on the Play button again, and click on the Attack Parameter. Right click on it, and click on Delete.</span></p>
+<p class="rvps2"><span class="rvts6">Rather than using a Bool, let's try a Trigger Parameter. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Stop the animation by click on the Play button again, and click on the Attack Parameter. Right click on it, and click on Delete.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Press the Plus button again, and set a Trigger type Parameter, naming it "Attack". </span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
@@ -150,9 +155,9 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">However, it's not ideal yet. The Idle_A animation wants to finish before firing off the transition to the next state. When we are calling a Trigger for Attack, we want the transition to begin immediately. </span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Click on the Transition line from Idle_A to bp_upper_left_A. Remember that Has Exit Time? This means that before the State can Transition, the Exit Time must pass. The Exit Time is the length of the animation itself. Uncheck the Has Exit Time, and re-play the Animation and fire off the Attack Trigger.</span></p>
+<p class="rvps2"><span class="rvts6">Click on the Transition line from Idle_A to bp_upper_left_A. Remember that Has Exit Time setting? That tells the State that in order for it to Transition, the Exit Time must pass. The Exit Time is the length of the animation itself. Uncheck the Has Exit Time, and re-play the Animation and fire off the Attack Trigger.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">You'll notice that now when you click on the Attack trigger, the Transition happens immediately, firing off the bp_upper_left_A trigger. </span></p>
+<p class="rvps2"><span class="rvts6">You'll notice that now when you click on the Attack trigger, the Transition happens immediately, firing off the bp_upper_left_A trigger, interrupting the Idle_A state.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p></p>

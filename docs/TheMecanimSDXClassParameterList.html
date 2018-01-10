@@ -1,0 +1,609 @@
+﻿
+
+<html>
+	
+<head>
+	<title>The Mecanim SDX Class Parameter List</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("TheMecanimSDXClassParameterList");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">The Mecanim SDX Class Parameter List</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HowtocreateanAnimatorStateMachin.html">How to create an Animator State Machine</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="HowtocreateanAnimatorStateMachin.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="AddinganAliveAnimation.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">In order for your Animator State Machine to work in-game, the following Parameters are triggered from the Mecanim Class. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts40">Required Parameters</span></span></h1>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">These parameters are required for a basic entity.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Parameter Name</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Parameter Type</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Description</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">MovementState</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">0 for Idle, 1 for Walk, and 2 for Running</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Speed</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">FLOAT</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Controls the speed of the entity for Root Motion</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Attack</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Triggers the Attack animation</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Jump</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Triggers the Jump Animation</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IsAlive</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">BOOL</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Triggers the Wakeup Animation</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IsMoving</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">BOOL</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">True if entity is moving</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IsDead</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">BOOL</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Triggers the Death Animation</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The following Parameters is what the full Mecanim Class allows. If a trigger or value is not available, the mecanim class will fail the call quietly, and continue.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts40">BOOL</span></span></h1>
+<p class="rvps2"><span class="rvts6">The Animator State Machine uses bool for values that are explicitly set and unset. That is, if you set IsDead to false, it will stay false until you change it. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The following Bool Parameters are supported in the MecAnimSDX Class</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="346" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6"> Parameter Name</span></p>
+</td>
+<td width="194" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6"> Parameter Type</span></p>
+</td>
+<td width="827" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Description</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="346" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IsDead</span></p>
+</td>
+<td width="194" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">BOOL</span></p>
+</td>
+<td width="827" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">True if Entity is Dead, otherwise False</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="346" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IsAlive</span></p>
+</td>
+<td width="194" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">BOOL</span></p>
+</td>
+<td width="827" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">True if the Entity is awake and alive. </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="346" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IsMoving</span></p>
+</td>
+<td width="194" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">BOOL</span></p>
+</td>
+<td width="827" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">True if the Entity is moving</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="346" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IsEating</span></p>
+</td>
+<td width="194" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">BOOL</span></p>
+</td>
+<td width="827" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">True if the Entity is Eating</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="346" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IsCrouching</span></p>
+</td>
+<td width="194" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">BOOL</span></p>
+</td>
+<td width="827" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">True if the Entity is Crouching</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="346" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IsStunned</span></p>
+</td>
+<td width="194" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">BOOL</span></p>
+</td>
+<td width="827" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">True if the Entity is Stunned</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="346" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IsSleeping</span></p>
+</td>
+<td width="194" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">BOOL</span></p>
+</td>
+<td width="827" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">True if the Entity is Sleeping</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts40">INTEGER</span></span></h1>
+<p class="rvps2"><span class="rvts23"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Animator State Machine uses integer for numeric values. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h4 class="rvps12"><span class="rvts0"><span class="rvts25">Indexes</span></span></h4>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For the MecAnim SDX class, we use Integer types to offer Index values. That is, they are used if you want to add multiple animations for the same type of state. For example, if we have 5 different animation attacks, we can assign a unique attack index for each Transition. Attack number 1, would have an AttackIndex of 0. Attack number 2 would have an AttackIndex of 1. This allows us to have more variety in the various types of animations than we have had before.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Parameter Name</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Parameter Type</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Description</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">AttackIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for Attack animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">SpecialAttack</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for Special Attack animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">SpecialSecondAttack</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for Special Secondary Attack animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">RagingIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for any Raging animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">ElectrocutionIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for electrocution animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">CrouchIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for crouching animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">StunIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for any Stunned animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">SleeperIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for Sleeper Animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">HarvestIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for any harvesting animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">PainIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for any Pain animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">DeathIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for any Death Animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">RunIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for any Running Animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">WalkIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for any Walking Animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IdleIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for any Idle Animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="345" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">JumpIndex</span></p>
+</td>
+<td width="196" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">INTEGER</span></p>
+</td>
+<td width="826" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">A 0 to ... range of numbers to uniquely identify transitions for any Jump &nbsp;Animations</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h4 class="rvps12"><span class="rvts0"><span class="rvts25">Other Flags</span></span></h4>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">We use Integers for other flags as well</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Parameter Name</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Parameter Type</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Description</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">MovementState</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Integer</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">0 for Idle, 1 for Walking, and 2 for Running</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts40">FLOAT</span></span></h1>
+<p class="rvps2"><span class="rvts23"><br/></span></p>
+<p class="rvps2"><span class="rvts6">We use Float values when we will need decimal precisions, like for forward speed, when using Root Motion</span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Parameter Name</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Parameter Type</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Description</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Forward</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">FLOAT</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">The current speed of the entity</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Strafe</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">FLOAT</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">The speed in which its strafing</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">IdleTime</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">FLOAT</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">The Idle time in the mecanim class</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts23"><br/></span></p>
+<h1 class="rvps10"><span class="rvts0"><span class="rvts40">TRIGGER</span></span></h1>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Triggers are one-time events per call. We use triggers to let the Animator know we want to do an action once.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Parameter Name</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Parameter Type</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Description</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Attack</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This triggers one of the attack animations</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Pain</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This triggers the Getting Hit Animation</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Alive</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells the entity to wake up</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Jump</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells the entity to Jump</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">SpecialAttack</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells the entity to trigger a Special Attack</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">SpecialSecondAttack</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells the entity to trigger a Second Special Attack</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Raging</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells the entity to begin Raging</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Electrocution</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells the entity to begin being electrocuted</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Harvest</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells the entity to trigger harvest animation</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Crouch</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">TRIGGER </span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">This tells the entity to begin crouching</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com">Free Web Help generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

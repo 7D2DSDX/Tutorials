@@ -5,7 +5,7 @@
 <head>
 	<title>Adding a Sub-State Machine</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="generator" content="HelpNDoc Personal Edition 5.3.2.378">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
 	<meta name="keywords" content="">
 	
 	
@@ -90,7 +90,7 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps2"><span class="rvts6">In our previous exercise, we added 5 new Attack Animators, using a combination of Attack Trigger Parameter, and the AttackIndex Integer Parameter.</span></p>
+<p class="rvps2"><span class="rvts6">In our previous exercise, we added 5 new Attack Animators, each with two Conditions: Attack Trigger Parameter, and the AttackIndex Integer Parameter.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">As you can see, the Animator Window is getting a bit cluttered. To Clean it up a bit, we can create a Sub-State Machine to group them together. A Sub-State machine does not change any of the Transitions or States,but rather just cleans up the UI.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
@@ -103,7 +103,7 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem605.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">However, it's a different shape; it's a hexgon, rather than box. That's an indicator that it's a Sub-State machine, and may contain more states. Click on it once to open up it's Inspector window, and change the name. We'll call it the AttackGroup.</span></p>
+<p class="rvps2"><span class="rvts6">However, it's a different shape; it's a hexagon, rather than box. That's an indicator that it's a Sub-State machine, and may contain more states. Click on it once to open up it's Inspector window, and change the name. We'll call it the AttackGroup.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem606.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
@@ -124,12 +124,12 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem609.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">The Sub-State Machine has an Entry, Any State, and an Exit, like the top level State Machine. However, it has a new State: ( Up) Base Layer. This is the link outside of the Sub-State Machine, and it's what connects our AttackGroup to our Idle_6.</span></p>
+<p class="rvps2"><span class="rvts6">The Sub-State Machine has an Entry, Any State, and an Exit, like the top level State Machine. However, it has a new State: ( Up) Base Layer. This is the link outside of the Sub-State Machine, and it's what connects our AttackGroup to our Idle_A.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <h1 class="rvps10"><span class="rvts0"><span class="rvts22">Making Links Outside of the Sub-State Machine</span></span></h1>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">If you need to add a new Attack Animation to the sub-state, and need to Transition back to the main Idle_6, drag your Transition to the (Up) Base Layer. A small pop up will show you the available States to connect too.</span></p>
+<p class="rvps2"><span class="rvts6">If you need to add a new Attack Animation to the sub-state, and need to Transition back to the main Idle_A, drag your Transition to the (Up) Base Layer. A small pop up will show you the available States to connect too.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem610.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>

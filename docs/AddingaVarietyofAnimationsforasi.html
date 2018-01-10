@@ -5,7 +5,7 @@
 <head>
 	<title>Adding a Variety of Animations for a single Trigger</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="generator" content="HelpNDoc Personal Edition 5.3.2.378">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
 	<meta name="keywords" content="">
 	
 	
@@ -94,7 +94,7 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">For this next step, we are going to add multiple Attack animations, and allow them to be triggered at any time.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">First off, let's add more Animation Clips to the Animator window. Under the FightingMotionsVolume1/FBX/nomove folder, drag the following animations to the Animator window:</span></p>
+<p class="rvps2"><span class="rvts6">Let's add more Animation Clips to the Animator window. Under the FightingMotionsVolume1/FBX/nomove folder, drag the following animations to the Animator window:</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem596.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
@@ -102,7 +102,9 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem597.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Before, we transitioned from Idle_A into bp_upper_left_A. However, that limited us to only triggering a punch during the idle state. Click on the Transition lines from Idle_A to bp_upper_left_A, and delete the Transition lines by pressing the Delete key.</span></p>
+<p class="rvps2"><span class="rvts6">Before, we transitioned from Idle_A into bp_upper_left_A. However, that limited us to only triggering a punch during the idle state. Meaning, if our entity was running, it would have to go from Running, to move_forward_B2, and to Idle_A, then trigger the punching animation. Let's fix that.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Click on the Transition lines from Idle_A to bp_upper_left_A, and delete the Transition lines by pressing the Delete key.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Going forward, we want to be able to Transition our attack animations from any state. So rather than making transitions from every state, we are going to use the special "Any State" node. The Any State is an Animator shortcut that behaves like any other individual States, but acts like a wild card. As such, you cannot do a return transition to the Any State. Instead, we'll want to do a return Transition to our Idle_A. This implies that after we attack, we want to go back to our Idle state.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
@@ -111,11 +113,17 @@
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem598.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Make Transition lines from Any State to bk_rh_right_A2. For the Transition Condition, add the Attack Parameter as a condition. Since this is an Attack animation, and we want to be able to interrupt the current animation to fire off the attack, we also want to untick the Has Exit Time.</span></p>
+<p class="rvps2"><span class="rvts6">Make Transition lines from Any State to bk_rh_right_A2. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For the Transition Condition, add the Attack Trigger Parameter as a condition. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Since this is an Attack animation, and we want to be able to interrupt the current animation to fire off the attack, we also want to uncheck the Has Exit Time, since we want the attack animation to trigger immediately.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem599.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Proceed to make a Transition line from Any State, to each of the other attack States, setting the same Condition of Attack. For our return Transition, we want to go directly to the Idle_A state. Re-arrange the states so that it looks clearer, as we did below.</span></p>
+<p class="rvps2"><span class="rvts6">Proceed to make a Transition line from Any State, to each of the other attack States, setting the same Condition of Attack Trigger, and unchecking the Has Exit Time. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For our return Transition, we want to go directly to the Idle_A state. Re-arrange the states so that it looks clearer, as we did below.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem603.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
