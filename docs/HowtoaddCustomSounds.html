@@ -1,0 +1,178 @@
+﻿
+
+<html>
+	
+<head>
+	<title>How to add Custom Sounds </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.2.0.265">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("HowtoaddCustomSounds");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">How to add Custom Sounds </h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HowTos.html">How Tos</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="HowTos.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="BuildingtheSDXMod.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="HowtocreateanAnimatorStateMachin.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">This tutorial will help cover how to add custom sounds, like .wav files, into the game, and how to access them.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">There are many free sound effects you can find online. For example, </span><a class="rvts16" href="soundbible.com">soundbible.com</a><span class="rvts6"> is a free sound site that has thousands of sound effects. For this tutorial, we are going to download a wav file from soundbible, create an asset bundle, then write the XML to add it to the game.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a class="rvts16" href="http://soundbible.com/free-sound-effects-1.html">http://soundbible.com/free-sound-effects-1.html</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">You can choose any sound you want. For this tutorial, we are going to use the Fire Truck Horn sound by Daniel Simion: &nbsp;</span><a class="rvts16" href="http://soundbible.com/2192-Fire-Truck-Horn.html">http://soundbible.com/2192-Fire-Truck-Horn.html</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem621.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">You can click on the Play button and hear the sound effects. From there, click on the WAV icon to download the file.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Once downloaded, go into Unity and right click in the Asset pane, and select Import New Asset</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem622.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">And select your new Wav file. After a few seconds, it'll appear in your Asset window.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem623.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">To export, you do the same steps as you would for a block or entity, by right clicking, and generating an Asset Bundle. You can multi-select the sounds as well.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem624.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">For this example, we are saving it as Sounds.unity3d, and place it in your Resources folder.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem625.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In your Config XML, you'll reference the sounds like this:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts21">&lt;configs&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;config name="sounds"&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;append xpath="/Sounds"&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;SoundDataNode name="FireTruck"&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;AudioSource name="Sounds/AudioSource_VO" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;Noise ID="3" range="100" volume="25" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;AudioClip ClipName="#Sounds?fire-truck-air-horn_daniel-simion" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;LocalCrouchVolumeScale name="1.0" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;CrouchNoiseScale name="0.5" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;NoiseScale name="1" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;MaxVoices name="10" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;MaxRepeatRate name="1.111" /&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;/SoundDataNode&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;/append&gt;</span></p>
+<p class="rvps2"><span class="rvts21"></span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">&lt;/config&gt;</span></p>
+<p class="rvps2"><span class="rvts21">&lt;/configs&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Notice the ClipName is the Unity3d file, along with the name of the asset itself.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">To attach the new clip to an entity, you can adjust the value to point to the new SoundDataNode:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts68">&lt;property name="SoundSense" value="</span><span class="rvts21">FireTruck</span><span class="rvts68">" /&gt;</span></p>
+<p class="rvps2"><span class="rvts69"><br/></span></p>
+<p class="rvps2"><span class="rvts69"><br/></span></p>
+<p class="rvps2"><span class="rvts69"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps7" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by sphereii. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -392,6 +392,17 @@ span.rvts67
  font-style: italic;
  font-weight: bold;
 }
+span.rvts68
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+}
+span.rvts69
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #000000;
+}
 /* ========== Para Styles ========== */
 p,ul,ol /* Paragraph Style */
 {
